@@ -1,78 +1,42 @@
 # NLP-Tea Repository Overview
 
-This repository is a hands-on guide to learning Natural Language Processing (NLP). It mixes theory and code examples to make learning easier. The content is split into sections to help you understanding of NLP.
+This repository is a hands-on guide to learning Natural Language Processing (NLP). It mixes theory and code examples to make learning easier. The content is split into sections to help you understand NLP.
+
+---
 
 ## Table of Contents
-- [01-Text Preprocessing](#01-text-preprossing)
+
+- [Introduction](#introduction)
+- [01-Text Preprocessing](#01-text-preprocessing)
 - [02-Embeddings](#02-embeddings)
 - [Templates](#templates)
+- [License](#license)
+- [Contributing](#contributing)
 
----
+## Introduction
 
- # 01-Text Preprocessing
+This repository is where I document my NLP learning journey.   
+It contains theory notes, practical code examples useful resources.
+
+
+## 01-Text Preprocessing
 
 
 
- ---
+## 02-Embeddings
  
-# 02-Embeddings
- 
+
+
+## Templates
+
+## License
 
 
 
----
 
-# Templates
-
-k
-k
-k
-k
-k
-k
-k
-k
-k
-k
-k
-k
+## Contributing 
 
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-d
