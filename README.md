@@ -31,7 +31,7 @@ Includes:
 - **Word2Vec**
    - **CBOW**
    - **Skip Gram**
-      -**Negative Sampling** 
+     - **Negative Sampling** 
 - **Fast Text**
 - **TF-IDF**
 
