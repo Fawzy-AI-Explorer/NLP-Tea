@@ -32,12 +32,16 @@ Understand how to turn words into numbers (vectors) so that machines can underst
 Includes:
 
 - **Label & One Hot Encoder**
+  
 - **Bag Of Words**
+  
 - **TF-IDF**
+  
 - **Word2Vec**
    - **CBOW**
    - **Skip Gram**
-     - **Negative Sampling** 
+     - **Negative Sampling**
+       
 - **Fast Text**
 
 
