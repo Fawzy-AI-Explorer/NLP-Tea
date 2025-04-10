@@ -1,6 +1,7 @@
 # NLP-Tea
 
 *A practical repository combining NLP theory and code, organized for easy learning and collaboration.*
+
 ---
 
 ## Table of Contents
