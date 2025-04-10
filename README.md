@@ -14,3 +14,10 @@ This repository is a hands-on guide to learning Natural Language Processing (NLP
 - [Templates](#templates)
 
 ---
+
+## Project Structure
+
+### 1. **Text Preprocessing**  
+   Learn how to clean and prepare text before using it in NLP.
+
+### 2. **Embeddings**  
