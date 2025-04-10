@@ -9,6 +9,7 @@ This repository is a hands-on guide to learning Natural Language Processing (NLP
 - [Introduction](#introduction)
 - [01-Text Preprocessing](#01-text-preprocessing)
 - [02-Embeddings](#02-embeddings)
+- [03-Models](#03-models)    
 - [Templates](#templates)
 - [License](#license)
 - [Contributing](#contributing)
@@ -29,6 +30,7 @@ Includes
  
 Understand how to turn words into numbers (vectors) so that machines can understand them.  
 Includes:
+
 - **Label & One Hot Encoder**
 - **Bag Of Words**
 - **TF-IDF**
@@ -37,6 +39,21 @@ Includes:
    - **Skip Gram**
      - **Negative Sampling** 
 - **Fast Text**
+
+
+## 03-Models  
+Learn about Some models.  
+Includes:
+
+- **RNN (Recurrent Neural Network)**  
+
+- **LSTM (Long Short-Term Memory)**  
+
+- **GRU (Gated Recurrent Unit)**  
+
+- **Transformers**  
+
+
 
 ## Templates
 
