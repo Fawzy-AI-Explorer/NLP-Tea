@@ -22,18 +22,21 @@ It contains theory notes, practical code examples useful resources.
 ## 01-Text Preprocessing
 
 Learn how to clean and prepare text before feeding it into NLP models.  
-Includes removing stop words, lowercasing, tokenizing, and more.
+Includes 
+- removing stop words lowercasing, tokenizing, and more.
 
 ## 02-Embeddings
  
 Understand how to turn words into numbers (vectors) so that machines can understand them.  
 Includes:
+- **Label & One Hot Encoder**
+- **Bag Of Words**
+- **TF-IDF**
 - **Word2Vec**
    - **CBOW**
    - **Skip Gram**
      - **Negative Sampling** 
 - **Fast Text**
-- **TF-IDF**
 
 ## Templates
 
