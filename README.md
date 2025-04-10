@@ -5,27 +5,37 @@ This repository is a hands-on guide to learning Natural Language Processing (NLP
 ## Table of Contents
 - [01-Text Preprocessing](#01-text-preprocessing)
 - [02-Embeddings](#02-embeddings)
-  - [Word2Vec](#word2vec)
-  - [TF-IDF](#tf-idf)
-  - [Transformers](#transformers)
-- [03-Tasks](#03-tasks)
-  - [Sentiment Analysis](#sentiment-analysis)
-  - [Named Entity Recognition](#named-entity-recognition)
 - [Templates](#templates)
 
 ---
 
-## Project Structure
-
-### 01-**Text Preprocessing**  
-   Learn how to clean and prepare text before using it in NLP.
-
-### 2. **Embeddings**  
+ # 01-Text Preprocessing
 
 
 
+ ---
+ 
+# 02-Embeddings
+ 
 
 
+
+---
+
+# Templates
+
+k
+k
+k
+k
+k
+k
+k
+k
+k
+k
+k
+k
 
 
 
