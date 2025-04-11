@@ -22,13 +22,13 @@ It contains theory notes, practical code examples useful resources.
 
 ## 01-Text Preprocessing
 
-Learn how to clean and prepare text before feeding it into NLP models.  
+Learn how to clean and prepare text for NLP.  
 Includes 
 - removing stop words lowercasing, tokenizing, and more.
 
 ## 02-Embeddings
  
-Understand how to turn words into numbers (vectors) so that machines can understand them.  
+Understand how to represent words as numbers (vectors) so machines can understand them.  
 Includes:
 
 - **Label & One Hot Encoder**
@@ -46,7 +46,7 @@ Includes:
 
 
 ## 03-Models  
-Learn about Some models.  
+Explore different models used in NLP.
 Includes:
 
 - **RNN (Recurrent Neural Network)**  
