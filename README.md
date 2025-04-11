@@ -1,4 +1,4 @@
-# NLP-Tea Repository Overview
+# NLP-Tea 
 
 This repository is a hands-on guide to learning Natural Language Processing (NLP). It mixes theory and code examples to make learning easier. The content is split into sections to help you understand NLP.
 
