@@ -1,10 +1,9 @@
 # Word Embeddings
 
-[01-Label&OneHotEncoder](02-Word Embeddings/2.1-Label Encoder and One Hot Encoder)
+[01-Label&OneHotEncoder](https://github.com/Fawzy-AI-Explorer/NLP-Tea/tree/main/01-Text-Preprocessing)
 
-[d](02-Word Embeddings/2.1-Label Encoder and One Hot Encoder)
+[Link Text]([URL](https://github.com/Fawzy-AI-Explorer/NLP-Tea/tree/main/01-Text-Preprocessing))
 
-[![GitHub watchers][02-Word Embeddings/2.1-Label Encoder and One Hot Encoder)
 
 
 
