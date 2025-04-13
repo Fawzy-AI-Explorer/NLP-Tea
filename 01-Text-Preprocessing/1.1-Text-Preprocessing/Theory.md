@@ -1,12 +1,13 @@
 # Text Preprocessing
 
 # What ... ?
-- the process of cleaning and transforming raw text into a format suitable for NLP tasks
-
+-  the process of cleaning and transforming raw text into a format suitable for NLP tasks.
+-  first step of NLP projects.
+  
 # Why ... ?
-- Text data often contains noise such as punctuation, special characters, and irrelevant symbols. Preprocessing helps remove these elements.
-- Different forms of words (e.g., “run,” “running,” “ran”) can convey the same meaning but appear in different forms. Preprocessing techniques like stemming and lemmatization help standardize these variations.
-- raw text has Mixed cases ("Hello" , "hello") Models treat "Hello" and "hello" as different words.
+-  Text data often contains noise such as punctuation, special characters, and irrelevant symbols. Preprocessing helps remove these elements.
+-  Different forms of words (e.g., “run,” “running,” “ran”) can convey the same meaning but appear in different forms. Preprocessing techniques like stemming and lemmatization help standardize these variations.
+-  raw text has Mixed cases ("Hello" , "hello") Models treat "Hello" and "hello" as different words.
 and more...
 
 # When ... ? 
@@ -109,9 +110,12 @@ Before preprocessing, ask: <br>
 
 
 
+### Stemming & 
 
+- the process of reducing infected words to their stem
+- the process of removing the last few characters of a given word, to obtain a shorter form, even if that form doesn’t have any meaning in machine learning.
 
-
+![image](https://github.com/user-attachments/assets/8594aa9d-4acb-4930-8ca0-3e3c5b59e3e9)
 
 
 
