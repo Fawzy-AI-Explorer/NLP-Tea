@@ -34,7 +34,7 @@ Deletes symbols like !@#,. and urls
 - Apply for : Social media analysis, Topic modeling
 - Avoid for: If URLs/hashtags carry meaning (trend analysis)
 
-## Remove punctuation & numbers % White Spaces
+## Remove punctuation & numbers & White Spaces
   - Deletes noise like . , ! ? ) : " 123
 #### Apply & Avoid for: 
 - Apply for : Sentiment analysis (if numbers are irrelevant), Document classification
