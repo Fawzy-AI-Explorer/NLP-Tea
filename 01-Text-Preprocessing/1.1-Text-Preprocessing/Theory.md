@@ -72,27 +72,27 @@ Text preprocessing is task-specific <Br>
 The preprocessing steps you choose should always depend on: <Br>
 
 -  NLP Task
-  -  Sentiment Analysis
-    -  Lowercasing, remove URLs, emojis to text
-    -  Avoid removing negations ("not") or emojis 
+    -  Sentiment Analysis
+      -  Lowercasing, remove URLs, emojis to text
+      -  Avoid removing negations ("not") or emojis 
   -  Topic Classification
-    -  Lowercasing, stopword removal, stemming/lemmatizing 
+      -  Lowercasing, stopword removal, stemming/lemmatizing 
   -  Machine Translation
-    -  keep sentence structure
-    -  Avoid remove punctuation, stopwords
+      -  keep sentence structure
+      -  Avoid remove punctuation, stopwords
   -  Text Generation (GPT)
-    -  Avoid changing text
+      -  Avoid changing text
       
 -  Model
-  -  Traditional ML (SVM, Regression)
-    -  advanced: lowercase, stopwords, stemming  
-  -  Transformers (BERT)
-    -  minimal cleaning
+    -  Traditional ML (SVM, Regression)
+      -  advanced: lowercase, stopwords, stemming  
+    -  Transformers (BERT)
+      -  minimal cleaning
  
 - Dataset
-  -  Tweets
-  -  Product reviews
-  -  Scientific texts
+    -  Tweets
+    -  Product reviews
+    -  Scientific texts
 
 ---
 chat GPT Said : <br>
