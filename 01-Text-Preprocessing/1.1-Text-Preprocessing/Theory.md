@@ -15,21 +15,31 @@ and more...
 
 
 # How ... ?
+
 ## Lowercase
 Converts text to lowercase ("Hello WORLD" =>>> "hello world")
-### Apply for:
+### Apply & Avoid for:
+apply If the case (Capital ar lower) does not contain information.
+- Search engines (to normalize queries)
+- If your goal is just to classify
+  - Sentiment analysis, Spam Detection, Topic Classification (NLP, nlp) are Same
+Avoid :
+- Machine translation
+  
+Chat GPT Said: 
+If you're not sure, just ask: <br>
+         || “Does capitalization change the meaning in my task?” <br>
+If no, lowercase away. If yes, preserve it.
 
-gjkbnkgjnb 
-  - hhh
-    
 ## Remove URLs, mentions, hashtags
   - Deletes symbols like !@#,. and urls.
-  - ⚠️ don't Remove If URLs/hashtags carry meaning (trend analysis)
+### Avoid for: don't Remove If URLs/hashtags carry meaning (trend analysis)
 
   
 ## Remove punctuation & numbers % White Spaces.
   - Deletes noise like . , ! ? ) : " 123
-  -  ⚠️ don't Remove If punctuation carries emotion, number-sensitive 
+### Avoid for: 
+don't Remove If punctuation carries emotion, number-sensitive 
     - emotion detection : "Sad :(":
     - math problems
 
@@ -38,13 +48,15 @@ gjkbnkgjnb
   
 ## Remove stopwords
   - Deletes (Stop Words) common words ("is", "the", "and").
-  - ⚠️ don't Remove If stop words carries Informations 
+### Avoid for:
+don't Remove If stop words carries Informations 
     -  Sentiment analysis ("not", "never" are stopwords but means negation)
    
       
 ## Stemming & Lemmatization
   - return Word Base ("playing" => Play)
-  - ⚠️ don't Use
+### Avoid for:
+don't Use
     - generative tasks : Summarization or translation. 
   
 ## Spacy for Better Lemmatization
