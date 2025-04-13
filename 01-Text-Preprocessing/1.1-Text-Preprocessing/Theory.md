@@ -22,6 +22,7 @@ Converts text to lowercase ("Hello WORLD" =>>> "hello world")
 -  Avoid : <br>
     -  Machine translation
     -  POS (Parts-of-speech tagging (like noun, verb, adjective))
+      
 Chat GPT Said:  <br>
 If you're not sure, just ask: <br>
          || “Does capitalization change the meaning in my task?” || <br>
