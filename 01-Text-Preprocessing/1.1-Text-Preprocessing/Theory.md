@@ -108,6 +108,8 @@ Before preprocessing, ask: <br>
 The goal of both stemming and lemmatization is to reduce:
 
 -  inflectional forms and derivationally related forms of a word to a common base form
+
+  
 ![image](https://github.com/user-attachments/assets/5e647b23-f61d-4a14-b1b4-da60ca14137c)
 
 #### Stemming
