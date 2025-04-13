@@ -14,7 +14,7 @@ and more...
 
 ## Lowercase
 Converts text to lowercase ("Hello WORLD" =>>> "hello world")
-### Apply & Avoid for:
+#### Apply & Avoid for:
 -  apply If the case (Capital or lower) does not contain information
   -  Search engines (to normalize queries)
   -  If your goal is just to classify
@@ -35,7 +35,7 @@ Deletes symbols like !@#,. and urls
 
 ## Remove punctuation & numbers % White Spaces
   - Deletes noise like . , ! ? ) : " 123
-### Apply & Avoid for: 
+#### Apply & Avoid for: 
 - Apply for : Sentiment analysis (if numbers are irrelevant), Document classification
 - Avoid : If punctuation carries emotion, number-sensitive 
     - emotion detection : "Sad :("
@@ -47,7 +47,7 @@ Splits text into words or tokens ("I love NLP" → ["I", "love", "NLP"])
   
 ## Remove stopwords
 Deletes (Stop Words) common words ("is", "the", "and").
-### Apply & Avoid for:
+#### Apply & Avoid for:
 - Apply for : Topic modeling
 - Avoid : If stop words carries Informations 
     -  Sentiment analysis ("not", "never" are stopwords but means negation)
@@ -56,7 +56,7 @@ Deletes (Stop Words) common words ("is", "the", "and").
       
 ## Stemming & Lemmatization
   - return Word Base ("playing" => Play)
-### Apply & Avoid for:
+#### Apply & Avoid for:
 - Apply for : Spam detection, Search engines, Sentiment analysis
 - Avoid for : generative tasks (Summarization or translation) 
   
@@ -103,7 +103,7 @@ Before preprocessing, ask: <br>
 ---
 
 
-### Stemming & Lemmatization
+## Stemming & Lemmatization
 
 The goal of both stemming and lemmatization is to reduce:
 
