@@ -23,43 +23,47 @@ apply If the case (Capital ar lower) does not contain information.
 - Search engines (to normalize queries)
 - If your goal is just to classify
   - Sentiment analysis, Spam Detection, Topic Classification (NLP, nlp) are Same
-Avoid :
+Avoid : <br>
 - Machine translation
   
-Chat GPT Said: 
+Chat GPT Said:  <br>
 If you're not sure, just ask: <br>
          || “Does capitalization change the meaning in my task?” <br>
-If no, lowercase away. If yes, preserve it.
+If no, lowercase away. If yes, preserve it. <br>
 
 ## Remove URLs, mentions, hashtags
-  - Deletes symbols like !@#,. and urls.
-### Avoid for: don't Remove If URLs/hashtags carry meaning (trend analysis)
+Deletes symbols like !@#,. and urls.
+### Apply & Avoid for:
+- Apply for : Social media analysis, Topic modeling
+- Avoid for: If URLs/hashtags carry meaning (trend analysis)
 
   
 ## Remove punctuation & numbers % White Spaces.
   - Deletes noise like . , ! ? ) : " 123
-### Avoid for: 
-don't Remove If punctuation carries emotion, number-sensitive 
+### Apply & Avoid for: 
+- Apply for : Sentiment analysis (if numbers are irrelevant), Document classification
+- Avoid : If punctuation carries emotion, number-sensitive 
     - emotion detection : "Sad :(":
     - math problems
+    - Financial/medical texts ("COVID-19")
 
 ## Tokenize
-  - Splits text into words or tokens ("I love NLP" → ["I", "love", "NLP"]) 
+Splits text into words or tokens ("I love NLP" → ["I", "love", "NLP"]) 
   
 ## Remove stopwords
-  - Deletes (Stop Words) common words ("is", "the", "and").
-### Avoid for:
-don't Remove If stop words carries Informations 
+Deletes (Stop Words) common words ("is", "the", "and").
+### Apply & Avoid for:
+- Apply for : Topic modeling
+- Avoid : If stop words carries Informations 
     -  Sentiment analysis ("not", "never" are stopwords but means negation)
+    -  Machine translation (grammar depends on stopwords)
    
       
 ## Stemming & Lemmatization
   - return Word Base ("playing" => Play)
-### Avoid for:
-don't Use
-    - generative tasks : Summarization or translation. 
-  
-## Spacy for Better Lemmatization
+### Apply & Avoid for:
+- Apply for : Spam detection, Search engines
+- Avoid for : generative tasks (Summarization or translation) 
   
 ## Custom Rules
   - replace emojis with text "🙂" → "[smile]") Social media sentiment, reviews analysis
@@ -67,6 +71,41 @@ don't Use
 
 
 
+
+Text preprocessing is task-specific
+there's no one-size-fits-all. 
+The preprocessing steps you choose should always depend on:
+
+- NLP Task
+  - Sentiment Analysis
+    - Lowercasing, remove URLs, emojis to text
+    - Avoid removing negations ("not") or emojis if they carry sentiment 
+  - Topic Classification
+    - Lowercasing, stopword removal, stemming/lemmatizing 
+  - Machine Translation
+    - keep sentence structure
+    - Avoid remova punctuation, stopwords
+  - Text Generation (GPT)
+    - Avoid changing text
+      
+- Model
+  -  Traditional ML (SVM, Regression)
+    -  advanced: lowercase, stopwords, stemming  
+  -  Transformers (BERT)
+    -  minimal cleaning
+ 
+- Dataset
+  -  Tweets
+  -  Product reviews
+  -  Scientific texts
+
+
+chat GPT Said : <br>
+Always Ask Yourself <br>
+Before preprocessing, ask: <br>
+- What is the goal of my task?
+- Will this step remove or distort useful information?
+- What model am I using — does it need clean or natural text?
 
 
 
