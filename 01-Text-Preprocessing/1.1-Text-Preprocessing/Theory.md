@@ -16,12 +16,12 @@ and more...
 Converts text to lowercase ("Hello WORLD" =>>> "hello world")
 #### Apply & Avoid for:
 -  apply If the case (Capital or lower) does not contain information
-  -  Search engines (to normalize queries)
-  -  If your goal is just to classify
-    -  Sentiment analysis, Spam Detection, Topic Classification (NLP, nlp) are Same
+    -  Search engines (to normalize queries)
+    -  If your goal is just to classify
+      -  Sentiment analysis, Spam Detection, Topic Classification (NLP, nlp) are Same
 -  Avoid : <br>
-  -  Machine translation
-  -  POS (Parts-of-speech tagging (like noun, verb, adjective))
+    -  Machine translation
+    -  POS (Parts-of-speech tagging (like noun, verb, adjective))
 Chat GPT Said:  <br>
 If you're not sure, just ask: <br>
          || “Does capitalization change the meaning in my task?” || <br>
@@ -37,7 +37,7 @@ Deletes symbols like !@#,. and urls
   - Deletes noise like . , ! ? ) : " 123
 #### Apply & Avoid for: 
 - Apply for : Sentiment analysis (if numbers are irrelevant), Document classification
-- Avoid : If punctuation carries emotion, number-sensitive 
+- Avoid : If punctuation carries emotion, number-sensitive
     - emotion detection : "Sad :("
     - math problems
     - Financial/medical texts ("COVID-19")
