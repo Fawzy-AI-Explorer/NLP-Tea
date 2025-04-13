@@ -110,20 +110,59 @@ Before preprocessing, ask: <br>
 
 
 
-### Stemming & 
+### Stemming & Lemmatization
 
-- the process of reducing infected words to their stem
+The goal of both stemming and lemmatization is to reduce:
+
+-  inflectional forms and derivationally related forms of a word to a common base form
+![image](https://github.com/user-attachments/assets/5e647b23-f61d-4a14-b1b4-da60ca14137c)
+
+#### Stemming
+
+- the process of reducing infected words to their stem ( removing common affixes (prefixes, suffixes) from words)
 - the process of removing the last few characters of a given word, to obtain a shorter form, even if that form doesn’t have any meaning in machine learning.
-
+- rule Based Algorithm
+  
 ![image](https://github.com/user-attachments/assets/8594aa9d-4acb-4930-8ca0-3e3c5b59e3e9)
 
 
 
 
+#### Lemmatization
+
+The purpose of lemmatization is same as that of stemming but overcomes the drawbacks of stemming
+use of a vocabulary and morphological analysis of words,
+
+the token saw,
+stemming might return just s, (remove aw)
+lemmatization would attempt to return either see or saw
+depending on whether the use of the token was as a verb or a noun.
+
+
+![image](https://github.com/user-attachments/assets/faca7b47-8096-45e8-8b11-0b7025c81bbe)
+
+
+- Tokenization :
+- POS Tagging: Parts-of-speech tagging (like noun, verb, adjective, etc.)
+- Lemmatization:
+  -  Simple dictionary lookup. This works well for straightforward inflected forms,
+  -  Hand-crafted rule based system
+  -  Rules learned automatically from an annotated corpus.
 
 
 
 
 
-  
+
+- Stemming: Faster, but may create Wrong root for words and lose meaning. This is known as "over stemming."
+
+- Lemmatization: slower, More accurate, preserves meaning and grammatical function.
+
+
+
+
+
+
+
+
  
