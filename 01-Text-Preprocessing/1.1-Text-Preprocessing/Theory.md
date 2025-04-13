@@ -13,7 +13,7 @@ and more...
 # How ... ?
 
 - Lowercase
--   Converts text to lowercase ("Hello" → "hello")
+  - Converts text to lowercase ("Hello" → "hello")
 - Remove URLs, mentions, hashtags
 - Remove punctuation & numbers
 - Tokenize
