@@ -15,7 +15,6 @@ and more...
 
 
 # How ... ?
-
 ## Lowercase
 Converts text to lowercase ("Hello WORLD" =>>> "hello world")
 ### Apply for:
