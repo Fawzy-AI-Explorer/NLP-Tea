@@ -11,14 +11,16 @@ Bag of Words is a text representation technique used in Natural Language Process
 
 
 
-## Steps 
-1.  Prepare your corpus
-2.  Preprocessing (corpus)
-3.  Create Vocabulary (unique words in the corpus.)
-4.  Calculate count of vocab words (histogram) in each document.
-       -  For Each Doc (create a vector of word counts:) :
-               -  calc the Count of each vacab Word
-               -  Each position in the vector corresponds to a word in the vocabulary (number of times that word appears in the document)
+## Steps
+
+1. Prepare your corpus  
+2. Preprocessing (corpus)  
+3. Create Vocabulary (unique words in the corpus)  
+4. Calculate count of vocab words (histogram) in each document  
+   - For Each Doc: create a vector of word counts
+     - Calculate the count of each vocab word 
+     - Each position in the vector corresponds to a word in the vocabulary (number of times that word appears in the document)
+
 
 For documents not considered during Vocab design , they may contain some words not
 in vocabulary (Out of Vocab). Those words are ignored.
@@ -36,10 +38,9 @@ in vocabulary (Out of Vocab). Those words are ignored.
 
 
               W1     W2     W3     W4     ...............Wv ==> Vocab (Unique Words)
-        Doc1 [                       
-        Doc2
-        Doc3
-
+        Doc1 [                                             ]                       
+        Doc2 [                                             ]
+        Doc3 [                                             ] 
 
 
 
