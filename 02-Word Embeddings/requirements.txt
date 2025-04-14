@@ -3,3 +3,11 @@ nltk
 scikit-learn
 numpy
 contractions
+
+
+
+pandas>=1.3.0
+nltk>=3.6.7
+contractions>=0.0.18
+scikit-learn>=1.0.0
+numpy>=1.21.0
