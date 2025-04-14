@@ -5,4 +5,6 @@
 
 ## 02 - Bag Of Words
 
+### What is Bag of Words (BoW)?
 
+#### gcvdg
