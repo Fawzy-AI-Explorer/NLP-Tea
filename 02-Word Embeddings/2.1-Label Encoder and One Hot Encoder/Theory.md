@@ -72,7 +72,13 @@ Distance between two vectors of two words that are One-Hot Encoded is the same (
 
 
 
+1. gbngh
+2. fvfvrf
+3. fdvcrfdv
+4. vddv a
+    4.1. fvmifv m
 
+   
 
 
 
