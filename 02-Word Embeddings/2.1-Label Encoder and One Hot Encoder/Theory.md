@@ -14,7 +14,7 @@ Limitations  :
 
 -  Lack of Semantic Information:
   
-    -  Since each word is mapped to a single integer, the numeric distance between two encoded words depends solely on the integer values of the two given words, not on the semantic similarity between the words.
+    -  Since each word is mapped to a single integer, the numeric distance between two encoded words depends olely on the integer values of the two given words, not on the semantic similarity between the words.
       
 -  Unsuitable for NLP
     -  we want representations that capture the meaning and relationships between words. Label encoding fails to capture semantic and contextual information because it encodes each word independently as a scalar.
@@ -45,7 +45,7 @@ Represent text as an Binary vectors.
 -  The vector’s length equals the number of unique categories.
 -  All elements of the vector are 0 except for one element, which is set to 1 to indicate the presence of that category.
 
--  Distance between two vectors of two words that are One-Hot Encoded is the same (either “2” for different words and “0” for same words)
+-  Distance between two vectors of two words that are One-Hot Encoded is the same (either "2" for different words and "0" for same words)
 
 -  High Dimensionality , length of Each Vector equal lenght voab (Unique words) (e.g. Unique=10000)
   
