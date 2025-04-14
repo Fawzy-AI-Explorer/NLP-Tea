@@ -27,7 +27,7 @@ Limitations  :
 3.     Build a Vocabulary (Unique Words)
          -  Combine tokens from all documents and create a set of unique words
 4.     Integer Mapping
-         -  Map each unique word (or category) to a unique integer    
+         -  Map each unique word to a unique integer    
 
 5.     Transform the Documents
          -  Replace each word in each document with its corresponding integer according to the mapping.
