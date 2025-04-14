@@ -50,15 +50,15 @@ Giving Data (Doc1, Doc2, Doc3, ......)
 1.     create corpus = list of all Dos
 2.     preprocessing (take Doc as an input, out Tokens) List[List[str]]
 3.     Build a Vocabulary (Unique Words)
-     -    Combine tokens from all documents and create a set of unique words
+         -    Combine tokens from all documents and create a set of unique words
 4.     Integer Mapping
-     -    Map each unique word (or category) to a unique integer    
+         -    Map each unique word (or category) to a unique integer    
 
 5.     Transform the Documents
-     -    Replace each word in each document with its corresponding integer according to the mapping.
+         -    Replace each word in each document with its corresponding integer according to the mapping.
 6.     Post-Processing
-     -    Pad sequences: Ensure all sequences have the same length.
-         -    add Padding to ensure that all Docs has the same Lenght.
+         -    Pad sequences: Ensure all sequences have the same length.
+             -    add Padding to ensure that all Docs has the same Lenght.
 
 
 
