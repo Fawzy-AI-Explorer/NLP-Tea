@@ -52,13 +52,13 @@ Giving Data (Doc1, Doc2, Doc3, ......)
 -    Build a Vocabulary (Unique Words)
      -    Combine tokens from all documents and create a set of unique words
 -    Integer Mapping
-    -     Map each unique word (or category) to a unique integer    
+     -    Map each unique word (or category) to a unique integer    
 
 -    Transform the Documents
-    -    Replace each word in each document with its corresponding integer according to the mapping.
+     -    Replace each word in each document with its corresponding integer according to the mapping.
 -    Post-Processing
--    Pad sequences: Ensure all sequences have the same length.
--    add Padding to ensure that all Docs has the same Lenght.
+     -    Pad sequences: Ensure all sequences have the same length.
+         -    add Padding to ensure that all Docs has the same Lenght.
 
 
 
