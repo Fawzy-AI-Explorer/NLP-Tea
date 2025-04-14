@@ -26,7 +26,24 @@ There are two main Approaches for word embedding:
 
 ## 01- Label Encoder
 
-Represent text 
+### What It Is
+
+Represent text data as an integr values (mapping each unique Word to a unique integer (scalar) )
+
+Used more in classical ML Algorithms (Structure Data) Features with Ordinal Characteristics ("small", "medium", "large")
+
+Suitable for tree-based models (e.g., Decision Trees, Random Forests) that do not assume ordinal relationships.
+
+Cons : 
+
+-  Lack of Semantic Information:
+  
+    -  Since each word is mapped to a single integer, the numeric distance between two encoded words depends solely on the integer values of the two given words, not on the semantic similarity between the words.
+      
+    -  Unsuitable for NLP
+        -  we want representations that capture the meaning and relationships between words. Label encoding fails to capture semantic and contextual information because it encodes each word independently as a scalar.
+       
+
 
 
 
@@ -36,4 +53,17 @@ Represent text
 
 
 ## 02- One Hot Encoder
+
+Represent text as an Binary vectors.
+
+Distance between two vectors of two words that are One-Hot Encoded is the same (either “2” for different words and “0” for same words)
+
+
+
+
+
+
+
+
+
 
