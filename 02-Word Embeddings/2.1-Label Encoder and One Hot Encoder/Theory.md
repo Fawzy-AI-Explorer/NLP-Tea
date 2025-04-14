@@ -48,7 +48,7 @@ Limitations  :
 Giving Data (Doc1, Doc2, Doc3, ......)
 
 -    create corpus = list of all Dos
--    preprocessing (take Doc as an input out Tokens) List[List[str]]
+-    preprocessing (take Doc as an input, out Tokens) List[List[str]]
 -    Build a Vocabulary (Unique Words)
      -    Combine tokens from all documents and create a set of unique words
 -    Integer Mapping
