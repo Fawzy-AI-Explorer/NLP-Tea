@@ -45,20 +45,18 @@ Limitations  :
        
 ### Steps
 
-Giving Data (Doc1, Doc2, Doc3, ......)
-
-1.     create corpus = list of all Dos
+1.     create corpus = list of all Dos [Doc1, Doc2, Doc3, ......]
 2.     preprocessing (take Doc as an input, out Tokens) List[List[str]]
 3.     Build a Vocabulary (Unique Words)
-         -    Combine tokens from all documents and create a set of unique words
+         -  Combine tokens from all documents and create a set of unique words
 4.     Integer Mapping
-         -    Map each unique word (or category) to a unique integer    
+         -  Map each unique word (or category) to a unique integer    
 
 5.     Transform the Documents
-         -    Replace each word in each document with its corresponding integer according to the mapping.
+         -  Replace each word in each document with its corresponding integer according to the mapping.
 6.     Post-Processing
-         -    Pad sequences: Ensure all sequences have the same length.
-             -    add Padding to ensure that all Docs has the same Lenght.
+         -  Pad sequences: Ensure all sequences have the same length.
+             -  add Padding to ensure that all Docs has the same Lenght.
 
 
 
@@ -67,16 +65,23 @@ Giving Data (Doc1, Doc2, Doc3, ......)
 ## 02- One Hot Encoder
 
 Represent text as an Binary vectors.
+-  The vector’s length equals the number of unique categories.
+-  All elements of the vector are 0 except for one element, which is set to 1 to indicate the presence of that category.
 
-Distance between two vectors of two words that are One-Hot Encoded is the same (either “2” for different words and “0” for same words)
+-  Distance between two vectors of two words that are One-Hot Encoded is the same (either “2” for different words and “0” for same words)
 
+'''
+For example, given categories:
+["cat", "dog", "fish"]
+the one hot encoding representation might be:
 
+"cat" → [1, 0, 0]
 
-1. gbngh
-2. fvfvrf
-3. fdvcrfdv
-4. vddv a
-    4.1. fvmifv m
+"dog" → [0, 1, 0]
+
+"fish" → [0, 0, 1]
+
+'''
 
    
 
