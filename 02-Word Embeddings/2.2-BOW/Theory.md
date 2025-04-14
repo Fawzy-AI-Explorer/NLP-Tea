@@ -7,7 +7,7 @@
 
 ## What is Bag of Words (BoW)?
 
-Bag of Words is a text representation technique used in Natural Language Processing (NLP) to convert unstructured text  numerical. It treats a document as an unordered collection (or "bag") of words, ignoring word order ans structure. Each document is represented as a vector where each dimension corresponds to the frequency (or presence) of a word from a vocabulary(Unique Words). 
+convert text into numerical. It treats a document as an unordered collection (or "bag") of words, ignoring word order and structure. Each document is represented as a vector where each dimension corresponds to the frequency (or presence) of a word from a vocabulary(Unique Words). 
 
 
 
@@ -22,8 +22,7 @@ Bag of Words is a text representation technique used in Natural Language Process
      - Each position in the vector corresponds to a word in the vocabulary (number of times that word appears in the document)
 
 
-For documents not considered during Vocab design , they may contain some words not
-in vocabulary (Out of Vocab). Those words are ignored.
+For documents not considered during Vocab design , they may contain some words not in vocabulary (Out of Vocab). Those words are ignored.
 
 
 ## Limitations:
@@ -38,7 +37,7 @@ in vocabulary (Out of Vocab). Those words are ignored.
 
 
               W1     W2     W3     W4     ...............Wv ==> Vocab (Unique Words)
-        Doc1 [                                             ]                       
+        Doc1 [                                             ]  => len = len(vocab) = len (Unique words)                  
         Doc2 [                                             ]
         Doc3 [                                             ] 
 
