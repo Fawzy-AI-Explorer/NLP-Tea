@@ -41,6 +41,16 @@ For documents not considered during Vocab design , they may contain some words n
         Doc2 [                                             ]
         Doc3 [                                             ] 
 
+---
+---
+---
+
+
+
+
+
+
+
 
 
 
