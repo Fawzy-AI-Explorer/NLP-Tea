@@ -34,7 +34,7 @@ Used more in classical ML Algorithms (Structure Data) Features with Ordinal Char
 
 Suitable for tree-based models (e.g., Decision Trees, Random Forests) that do not assume ordinal relationships.
 
-Cons : 
+Limitations  : 
 
 -  Lack of Semantic Information:
   
@@ -43,10 +43,22 @@ Cons :
     -  Unsuitable for NLP
         -  we want representations that capture the meaning and relationships between words. Label encoding fails to capture semantic and contextual information because it encodes each word independently as a scalar.
        
+### Steps
 
+Giving Data (Doc1, Doc2, Doc3, ......)
 
+-    create corpus = list of all Dos
+-    preprocessing (take Doc as an input out Tokens) List[List[str]]
+-    Build a Vocabulary (Unique Words)
+     -    Combine tokens from all documents and create a set of unique words
+-    Integer Mapping
+    -     Map each unique word (or category) to a unique integer    
 
-
+-    Transform the Documents
+    -    Replace each word in each document with its corresponding integer according to the mapping.
+-    Post-Processing
+-    Pad sequences: Ensure all sequences have the same length.
+-    add Padding to ensure that all Docs has the same Lenght.
 
 
 
