@@ -40,23 +40,23 @@ Limitations  :
   
     -  Since each word is mapped to a single integer, the numeric distance between two encoded words depends solely on the integer values of the two given words, not on the semantic similarity between the words.
       
-    -  Unsuitable for NLP
-        -  we want representations that capture the meaning and relationships between words. Label encoding fails to capture semantic and contextual information because it encodes each word independently as a scalar.
+-  Unsuitable for NLP
+    -  we want representations that capture the meaning and relationships between words. Label encoding fails to capture semantic and contextual information because it encodes each word independently as a scalar.
        
 ### Steps
 
 Giving Data (Doc1, Doc2, Doc3, ......)
 
--    create corpus = list of all Dos
--    preprocessing (take Doc as an input, out Tokens) List[List[str]]
--    Build a Vocabulary (Unique Words)
+1.     create corpus = list of all Dos
+2.     preprocessing (take Doc as an input, out Tokens) List[List[str]]
+3.     Build a Vocabulary (Unique Words)
      -    Combine tokens from all documents and create a set of unique words
--    Integer Mapping
+4.     Integer Mapping
      -    Map each unique word (or category) to a unique integer    
 
--    Transform the Documents
+5.     Transform the Documents
      -    Replace each word in each document with its corresponding integer according to the mapping.
--    Post-Processing
+6.     Post-Processing
      -    Pad sequences: Ensure all sequences have the same length.
          -    add Padding to ensure that all Docs has the same Lenght.
 
