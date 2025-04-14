@@ -19,14 +19,14 @@ Converts text to lowercase ("Hello WORLD" =>>> "hello world")
     -  Search engines (to normalize queries)
     -  If your goal is just to classify
       -  Sentiment analysis, Spam Detection, Topic Classification (NLP, nlp) are Same
--  Avoid : <br>
+-  Avoid :      
     -  Machine translation
     -  POS (Parts-of-speech tagging (like noun, verb, adjective))
       
 Chat GPT Said:  <br>
-If you're not sure, just ask: <br>
-         || “Does capitalization change the meaning in my task?” || <br>
-If no, lowercase away. If yes, preserve it <br>
+If you're not sure, just ask:  
+         || “Does capitalization change the meaning in my task?” ||  
+If no, lowercase away. If yes, preserve it  
 
 ## Remove URLs, mentions, hashtags
 Deletes symbols like !@#,. and urls
