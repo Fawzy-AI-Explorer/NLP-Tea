@@ -71,15 +71,17 @@ Represent text as an Binary vectors.
 -  Distance between two vectors of two words that are One-Hot Encoded is the same (either “2” for different words and “0” for same words)
 
 '''
-For example, given categories:
-["cat", "dog", "fish"]
-the one hot encoding representation might be:
 
-"cat" → [1, 0, 0]
-
-"dog" → [0, 1, 0]
-
-"fish" → [0, 0, 1]
+                For example, given categories:
+                
+        ["cat", "dog", "fish"]
+        the one hot encoding representation might be:
+        
+        "cat" → [1, 0, 0]
+        
+        "dog" → [0, 1, 0]
+        
+        "fish" → [0, 0, 1]
 
 '''
 
