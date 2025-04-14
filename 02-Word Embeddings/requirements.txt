@@ -1,1 +1,5 @@
-
+pandas
+nltk
+scikit-learn
+numpy
+contractions
