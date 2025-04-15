@@ -35,6 +35,23 @@ The main objective of Word2Vec is to learn word embeddings that:
 - Context Words:
   - The words surrounding the target word within window size.
 
+`my name is mohammad fawzy`                
+window size = 1    
+my => name    
+name => my, is       
+is => name, mohammad         
+mohammad => is, fawzy         
+fawzy => mohammad          
+window size = 2           
+my => name , is          
+name => my, is, mohammad          
+is => my, name, mohammad, fawzy          
+mohammad => name, is, fawzy            
+fawzy => is, mohammad           
+     
+
+
+
 
 ## How Does Word2Vec Work?  
 
