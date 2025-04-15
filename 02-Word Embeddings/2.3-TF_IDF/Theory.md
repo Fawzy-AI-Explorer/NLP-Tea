@@ -60,8 +60,6 @@ Document Frequency)
    - Rows : Docs
    - Cols : Vocab terms
  
-
-
 - For Each Word (t) in Vocab  :
      - Clac IDF(t) 
      - For Each Doc (d) in Corpus
