@@ -122,8 +122,9 @@ Suppose the
    - The hidden layer output (the word embedding) is then passed through another weight matrix W′(embedding size × vocab size) to produce logits for every word in the vocabulary.
    - A softmax function is applied to these Logits to get a probability distribution over all words. This distribution reflects the probability of each word being a context word for the given target word.
 6. Training Objective
-  - The error between the predicted probabilities and the actual context words (represented as one-hot vectors) is computed.
-The network uses backpropagation to adjust both weight matrices W and W′
+  - compute The error between the predicted probabilities and the actual context words represented as one-hot vectors (Sum all context in one vextor).
+  - [0 0 1 0 1 0 0 0 0 0.......] 
+  - The network uses backpropagation to adjust both weight matrices W and W′
 7. Extracting the Embeddings
    - Once training is complete, the weights in the hidden layer matrix W are used as the word embeddings.
    - These embeddings capture the relationships between words based on their context in the training text.
