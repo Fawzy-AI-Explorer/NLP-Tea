@@ -91,25 +91,29 @@ Word2Vec Uses a shallow neural network that consists of an input layer, a hidden
 
 
 
-Vocab Size = 100 , Window Size = 1
-Each Word represented in Binary Vector (Len = 100) All 0 except the index
-Suppose the   
-- target Has 1 in position 3 [0 0 0 1 0 0 0 0 0 0.......]
-- context [0 0 1 0 0 0 0 0 0 0.......], [0 0 0 0 1 0 0 0 0 0.......]
+Vocab Size = 100 , Window Size = 1   
+Each Word represented in Binary Vector (Len = 100) All 0 except the index  
+Suppose the     
+- target  
+   - Has 1 in position 3 [0 0 0 1 0 0 0 0 0 0.......]  
+- context      
+   - Has 1 in position 2 [0 0 1 0 0 0 0 0 0 0.......]    
+   - Has 1 in position 4 [0 0 0 0 1 0 0 0 0 0.......]    
 
-
-
-1. One-Hot Encoding
+1. One-Hot Encoding     
    - Every word in the vocabulary is represented as a Binary vector
 2. Defining Target and Context Words
    - Target Word: The central word for which an embedding is learned
    - Context Words: The words that surround the target word in a sentence
 3. Input Layer
    - take the one-hot encoded vector for the target word
+   - Feed the Target Word
 4. Hidden Layer (Embedding Layer)
    - The one-hot vector is multiplied by a weight matrix W (vocab size × embedding size).
    - Since only one element in the one-hot vector is 1, the output is simply the row of W corresponding to that word. This row becomes the word embedding for the target word.
    - The training process adjusts the weights in W so that similar words (appearing in similar contexts) end up with similar vectors.
+   - ![image](https://github.com/user-attachments/assets/635aa4dd-c693-40a6-8894-6c2c76d5d004)
+
 5. Output Layer
    - The hidden layer output (the word embedding) is then passed through another weight matrix W′(embedding size × vocab size) to produce logits for every word in the vocabulary.
    - A softmax function is applied to these Logits to get a probability distribution over all words. This distribution reflects the probability of each word being a context word for the given target word.
