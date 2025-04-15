@@ -70,9 +70,13 @@ Word2Vec Uses a shallow neural network that consists of an input layer, a hidden
 1. Continuous Bag of Words (CBOW):
    - Given the `Context` words, Predict `Target` word
    - works well with large datasets and It is computationally more efficient.
+   - ![image](https://github.com/user-attachments/assets/9ef1f8ad-df42-4b6a-b7c1-068db91398d5)
+
 2. Skip-Gram:
    -  Given the `Target` word, Predict `Context` words
    -  Works well with smaller datasets and is particularly good at capturing rare words.
+   -  ![image](https://github.com/user-attachments/assets/bc926c2b-a686-44ae-ba4b-afadf10a233d)
+
 
 
 # Skip-Gram
