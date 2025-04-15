@@ -37,7 +37,7 @@ The main objective of Word2Vec is to learn word embeddings that:
 
 `my name is mohammad fawzy`                
 window size = 1    
-`Target` => `Context`
+`Target` => `Context`     
 `my` => `name`    
 `name` => `my, is`       
 `is` => `name, mohammad`         
