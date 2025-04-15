@@ -14,7 +14,7 @@ There are two main Approaches for word embedding:
     -  [Label (integer) Encoding](https://github.com/Fawzy-AI-Explorer/NLP-Tea/tree/main/02-Word%20Embeddings/2.1-Label%20Encoder%20and%20One%20Hot%20Encoder)  
     -  [One-Hot encoded vector](https://github.com/Fawzy-AI-Explorer/NLP-Tea/tree/main/02-Word%20Embeddings/2.1-Label%20Encoder%20and%20One%20Hot%20Encoder) 
     -  [Bag of Word (BOW) Count Vector](https://github.com/Fawzy-AI-Explorer/NLP-Tea/tree/main/02-Word%20Embeddings/2.2-BOW) 
-    -  Term Frequency- Inverse Document frequency (TF-IDF) Vector.  
+    -  [Term Frequency- Inverse Document frequency (TF-IDF) Vector](https://github.com/Fawzy-AI-Explorer/NLP-Tea/tree/main/02-Word%20Embeddings/2.3-TF_IDF)  
 -  Prediction Based Embedding
     -  Word2Vec
         -  CBOW
