@@ -83,6 +83,7 @@ Sentences With n Words , Each Word Represented as vector ( len = 90 )
 لو معاك 100 frame  يعني السامبل الواحد فيه 100 Frame ==>   
 هيبقى معاك 100 Vec هيدخله واحد واحد و مع كل vec داخل للنتورك بتدخل معاه vec 1 بيعبر عن ملخص كل اللي فات History      
 لو انت عند ال Frame K هتدخل للنتورك ===> vec K بيعبر عن الحالى و Vec from 1 to K-1 ده ال History وطبعا كل مرة هتعمل Update لل History ده تضيف عليه ال frame  الحالي   
+![image](https://github.com/user-attachments/assets/6af25a3e-68de-4f79-b16e-a7a3f9fa0db8)
 
 ```
 in FC : Input x(Video/Sentence) fed at once 
