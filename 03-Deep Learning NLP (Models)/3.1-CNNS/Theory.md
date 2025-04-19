@@ -46,7 +46,7 @@ Conv1D layer 2 filters, kernel size = 3 (3*3(As number of features = 3))
   - (97 - 3)/2 + 1 = 48
   - Shape = (48, 20)
 - MaxPooling1D layer: pool size = 2
-  - output shape = (24, 2) 
+  - output shape = (24, 20) 
 
 
 
