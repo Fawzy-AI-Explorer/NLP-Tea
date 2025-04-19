@@ -1,58 +1,66 @@
-# RNNs
+# RNNs (Recurrent Neural Networks)
 
 ## Sequential Data
-- Sequential data : refers to any data where the order of elements matters.
-  - Text, Videoes   
-- Sequence Models : Models designed for sequential data
-  - RNNs, LSTMs, GRUs, Transformers
+- Sequential data is any data where the order of elements matters.
+  - Examples: Text, Videos, Speech   
+- Sequence Models are designed for sequential data
+  - Examples: RNNs, LSTMs, GRUs, Transformers
 
 ## Temporal vs. Spatial Data
-- Temporal Data: Involves sequences that vary over time. (زمان)
-  - Time Series : Stock prices: time. Weather data: during the day.
-  - Speech signals: Audio waveforms over time.
-  - Video: sequence of frames over time.
-  - Text: Words or characters appear in a specific order.
-- Spatial Data: Refers to data associated with spatial locations.(مواقع مكانية)
+- Temporal Data: sequences that changr over time (related to **time**)
+  - Time Series : Stock prices, Weather data
+  - Speech signals: (audio changes over time)
+  - Video: sequence of frames over time
+  - Text:  (sequence of words or characters)
+- Spatial Data: Refers to data associated with spatial locations.(structure in space(2-D grid))
   - Images: Pixels arranged in a grid.
   - Video: Each video frame is essentially an image (Pixels)
   - maps: Geographic data for specific areas.
 
 ## What is RNNs ? 
-Recurrent Neural Networks (RNNs) are a class of neural networks designed for processing sequential data. They capture temporal dependencies and maintain a "memory" of previous inputs.
-
+- RNNs are neural networks specially designed for sequential data.
+- They remember past information using a "history vector".
+- Great for tasks where order and context matter (e.g. language, time series)
 
 ## Why RNN Not FC?
+- FC networks:
+  - Expect fixed-size input and output
+    - Can’t handle variable-length sequences well 
+  - Don’t remember previous inputs
+    - Doesn’t retain info from earlier words/time steps. 
+  - Ignore the order of inputs
+    - No temporal structure. 
+  - Traditional neural networks process input data without considering sequence or time-based dependencies.
 
-- Fixed-size input/output: Can’t process variable-length sequences.
-- No memory of past: Doesn’t retain info from earlier words/time steps.
-- Order doesn’t matter: No temporal structure.
-- Traditional neural networks process input data without considering sequence or time-based dependencies.
+- RNNs
+  - Sequential Data Handling (where the order of inputs matters)
+  - RNNs retain information from previous steps, making them suitable for tasks that require understanding context or history
+  - Efficiency with Variable-Length Inputs: RNNs can handle variable-length sequences naturally. FCNs require fixed-length inputs
+    - Translation  
+  - "This is good" vs. "I can't say this is good."
+    - FC treats "good" the same in both sentences.
+    - RNN understands the context around "good".  
 
-- Sequential Data Handling: (where the order of inputs matters)
-- RNNs retain information from previous steps, making them suitable for tasks that require understanding context or history
-- Efficiency with Variable-Length Inputs: RNNs can handle variable-length sequences naturally. FCNs require fixed-length inputs
-- This is Good. _ I can't say This is Good.
-الاتنين Good لكن ال Context مختلف تمامًا FC هتفشل طبعا هي بالنسبة ليها كلمة Good واحده ف الاتنين إنما RNN هتفهم ال Context
-عندك حجم ال Input, output مش ثابت دايما بيتغير مثلا في الترجمه ال FC مش هتنفع انما ال RNN شغال.
-
-
+### How FC and RNN Process Video or Text:
 
 - FC
   - dataset (Videos)
-    - Each video => 100 Frames, Each Frame (image) $256 * 256$
-    - For Each Video : 3D Tensor $(100 * 256 * 256 )$
+    - For video with 100 frames, each 256x256:
+      - Whole video = 3D tensor (100 x 256 x 256) fed at once 
   - dataset (sentences)
-    - each sentence 30 Words ===> concatenate as a single string.
+    - For text:
+      - Join all words into one long vector and feed at once
+  - FC doesn’t see relationships between frames or words
 FC diesn't take relation Between Pixels or Words , Video or Sentence Feed to the Network 
-هو مش هياخد علاقة الكلمات ببعض ولا الفريمات ببعض. الفيديو او الجملة هتدخل للنتورك مرة واحدة وخلاص .
 - RNNs
-  - dataset (Videos)
-    - Each video => 100 Frames, Each Frame (image) $256 * 256$
-    - Take Frame By Frame (Sequential)
-    - At each time Step (t) Take 2 vecctor as an input
-       - Current Vector (t) (Represent :Cur Frame (t) ), History Vector (Represent :Frame 0 to Frame t-1)
-هنا بقا هياخد Frame By Frame مش كلهم مرا واحده. لا ده بيشتغل Sequential
-كل مرة هياخد الفريم بتاعها + فريم بيعبر عن اللي فات كله History يعني فكر ف الهستوري كانه فكتور واحد شايل معلومات ملخصة عن كل اللي فات
+  - Processes data step-by-step (Sequential):
+    - For video: frame-by-frame
+    - For text: word-by-word
+  - At each step (t) Take 2 vecctor as an input:
+     1. Takes current input vector : Represent Cur Frame (t) 
+     2. history vector (summary of all previous inputs) : Represent Frame 0 to Frame t-1)
+  - Updates the history after each step 
+
 ### How RNNs Handle Different Sizes Input.
 Sentences With n Words , Each Word Represented as vector ( len = 90 )
 - Input Layer >> Number of Neurons : 90 Nodes
@@ -69,7 +77,7 @@ Sentences With n Words , Each Word Represented as vector ( len = 90 )
 
 
 
-## Architecture
+## RNN Architecture
 
 ال RNN Layer هيشتغل على كل Frame لوحده ويعرف يستغل ال History او ال Frames السابقة.   
 لو معاك 100 frame  يعني السامبل الواحد فيه 100 Frame ==>   
@@ -77,19 +85,18 @@ Sentences With n Words , Each Word Represented as vector ( len = 90 )
 لو انت عند ال Frame K هتدخل للنتورك ===> vec K بيعبر عن الحالى و Vec from 1 to K-1 ده ال History وطبعا كل مرة هتعمل Update لل History ده تضيف عليه ال frame  الحالي   
 
 ```
-in FC : 
-كله مرة واحده input X هنا بتاخد ال 
+in FC : Input x(Video/Sentence) fed at once 
+
 a = g ( Wx_a . X + bx_a )
 y = g ( Wa_y . a + ba_y )
+----------------------------------------
+----------------------------------------
 
-in RNNs :
-هنا هتاخده على مراحل
- في كل مرة هتاخد كلمه واحده فقط طبعا مع ال History
-كل مرة هتاخد كلمه واحده فقط vector واحد بس يعني ويتجمع عليه ال History   
+in RNNs : Work on Steps (X[0], X[1], ......., X[t])    
 
 a(t) = g ( Wx_a . X(t) + a(t-1) + bx_a)
 y(t) = g ( Wa_y . a(t) + ba_y)
-----------------------------------------
+-----------
 a(0) = 0 ===> this is the History >>>>> History Vector Size = Number of Hidden State on RNN Layer
 *****
 a(0) = 0
