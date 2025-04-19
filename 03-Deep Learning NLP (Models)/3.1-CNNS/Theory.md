@@ -38,10 +38,16 @@ Conv1D layer 2 filters, kernel size = 3 (3*3(As number of features = 3))
 
 
 
-MaxPooling1D layer: pool size = 2
-Flatten
-Dense layer: 64 units
-Output layer: 1 unit (binary classification)
+- Input shape (99, 30)
+- Conv1D (10 Filter, Shape = 3, padding = "Valid", stride = 1)
+  - (99 - 3)/1 + 1 = 97  
+  - Shape = (97, 10)  
+- Conv1D (20 Filter, Shape = 3, padding = "Valid", stride = 2)
+  - (97 - 3)/2 + 1 = 48
+  - Shape = (48, 20)
+- MaxPooling1D layer: pool size = 2
+  - output shape = (24, 2) 
+
 
 
 
