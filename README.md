@@ -1,7 +1,5 @@
 # NLP-Tea 
 
----
-
 ## Table of Contents
 
 - [Introduction](#introduction)
