@@ -90,4 +90,14 @@ If you find something that can be improved, feel free to open an issue or submit
 
 ---
 
+## Future Topics
+
+Here are some topics planned for future inclusion:
+
+- LLMs Fine-Tuning
+- RAG
+- AI Agents using CrewAI
+
+---
+
 Thank you for using NLP-Tea! If you have any questions or feedback, feel free to open an issue on GitHub.
