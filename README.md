@@ -15,7 +15,7 @@
 ## Introduction
 
 This repository documents my journey learning Natural Language Processing.   
-It contains theory notes, practical code examples useful resources.   
+It contains theory notes, practical code examples and useful resources.   
 
 ## Content
 
