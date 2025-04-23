@@ -7,9 +7,10 @@ This repository is a hands-on guide to learning Natural Language Processing (NLP
 ## Table of Contents
 
 - [Introduction](#introduction)
-- [01-Text Preprocessing](#01-text-preprocessing)
-- [02-Embeddings](#02-embeddings)
-- [03-Models](#03-models)    
+- [Content](#content)
+ - [01-Text Preprocessing](#01-text-preprocessing)
+ - [02-Embeddings](#02-embeddings)
+ - [03-Models](#03-models)    
 - [Templates](#templates)
 - [License](#license)
 - [Contributing](#contributing)
@@ -18,6 +19,11 @@ This repository is a hands-on guide to learning Natural Language Processing (NLP
 
 This repository is where I document my NLP learning journey.   
 It contains theory notes, practical code examples useful resources.
+
+## Content
+
+vvfv
+vv
 
 
 ## 01-Text Preprocessing
