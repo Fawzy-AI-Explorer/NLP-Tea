@@ -14,21 +14,26 @@
 
 ## Introduction
 
-This repository documents my journey learning Natural Language Processing.   
-It contains theory notes, practical code examples and useful resources.   
+This repository documents my journey learning Natural Language Processing.  
+It includes theory notes, code examples, and useful resources for understanding and applying NLP concepts.   
 
 ## Content
 
-This repo is divided into sections.Each section about something important about NLP.
+This repository is divided into clear sections.   
+Each section teaches something important about NLP.   
+
+---
 
 ## 01-Text Preprocessing
 
 Learn how to clean and prepare text for NLP.  
-Includes 
-- removing stop words
-- lowercasing
-- tokenizing
-- and more
+Includes:   
+- Removing stop words
+- Lowercasing
+- Tokenizing
+- And more
+
+---
 
 ## 02-Embeddings
  
@@ -44,6 +49,8 @@ Includes:
      - **Negative Sampling**
 - **Fast Text**
 
+---
+
 ## 03-Models  
 Explore different models used in NLP.   
 Includes:
@@ -53,6 +60,8 @@ Includes:
 - **LSTM (Long Short-Term Memory)**  
 - **GRU (Gated Recurrent Unit)**  
 - **Transformers**  
+
+---
 
 ## Installation
 
@@ -66,13 +75,18 @@ pip install -r requirements.txt
 
 ## Templates
 
+Templates will be added here soon.   
+
+---
+
 ## License
 
 This project is licensed under the MIT License. See the LICENSE file for more details.
 
 ## Contributing 
 
-Contributions are welcome! Feel free to open an issue or submit a pull request to improve this guide.
+Contributions are welcome!               
+If you find something that can be improved, feel free to open an issue or submit a pull request.
 
 ---
 
