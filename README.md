@@ -62,7 +62,7 @@ Includes:
 To install NLP-Tea, clone the repository and install the required dependencies:
 
 ```sh
-git clone https://github.com/Ad7amstein/DerivativeXpert.git
+git clone https://github.com/Fawzy-AI-Explorer/NLP-Tea.git
 cd NLP-Tea
 pip install -r requirements.txt
 ```
