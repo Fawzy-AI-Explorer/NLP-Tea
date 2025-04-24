@@ -2,7 +2,7 @@
 
 ## Contents
 
-- [test](01-Text-Preprocessing/)
+- [test](01-Text-Preprocessing/1.1-Text-Preprocessing/Theory.md/)
 - [Introduction](#introduction)
 - [Content](#content)
   - [01-Text Preprocessing](#01-text-preprocessing)
