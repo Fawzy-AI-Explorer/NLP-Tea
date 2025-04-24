@@ -1,0 +1,29 @@
+title: NLP-Tea
+author: Mohammad Fawzy
+description: my journey learning Natural Language Processing.
+It includes theory notes, code examples, and useful resources for understanding and applying NLP concepts.
+remote_theme: daattali/beautiful-jekyll@6.0.1
+
+###############################################
+# --- List of links in the navigation bar --- #
+###############################################
+
+navbar-links:
+  About Me: https://www.linkedin.com/in/mohammad-fawzy-438b05261/
+
+################
+# --- Logo --- #
+################
+
+avatar: "/assets/img/avatar-icon.png"
+round-avatar: true
+
+
+social-network-links:
+  email: "moha.fawzy63@gmail.com"
+  linkedin: mohammad-fawzy-438b05261
+  rss: true  # remove this line if you don't want to show an RSS link at the bottom
+  github: Fawzy-AI-Explorer
+  kaggle: mohammadfawzy
+  youtube: "@kiloeducation360"
+  telegram: @mohammad_fawzy_m
