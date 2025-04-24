@@ -1,7 +1,8 @@
 # NLP-Tea 
 
-## Table of Contents
+## Contents
 
+- [test](01-Text-Preprocessing/)
 - [Introduction](#introduction)
 - [Content](#content)
   - [01-Text Preprocessing](#01-text-preprocessing)
