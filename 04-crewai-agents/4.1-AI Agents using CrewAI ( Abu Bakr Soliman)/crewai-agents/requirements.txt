@@ -1,3 +1,4 @@
 crewai
 agentops
 scrapegraph-py
+langchain
