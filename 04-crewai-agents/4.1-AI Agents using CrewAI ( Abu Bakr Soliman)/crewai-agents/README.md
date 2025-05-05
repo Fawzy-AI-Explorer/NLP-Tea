@@ -1,5 +1,12 @@
 # CrewAI Procurement Agents 🤖
 
+[![Python](https://img.shields.io/badge/Python-3.10+-blue.svg)](https://www.python.org/downloads/)
+[![CrewAI](https://img.shields.io/badge/CrewAI-0.1.30+-orange.svg)](https://github.com/joaomdmoura/crewAI)
+[![LangChain](https://img.shields.io/badge/LangChain-0.0.335+-green.svg)](https://github.com/langchain-ai/langchain)
+[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![Contributions](https://img.shields.io/badge/Contributions-Welcome-brightgreen.svg)](https://github.com/Fawzy-AI-Explorer/NLP-Tea/issues)
+[![Stars](https://img.shields.io/github/stars/Fawzy-AI-Explorer/NLP-Tea?style=social)](https://github.com/Fawzy-AI-Explorer/NLP-Tea/stargazers)
+
 A modular AI agent system built with CrewAI for product research, procurement, and analysis in e-commerce environments.
 
 ## Project Overview 🔍
