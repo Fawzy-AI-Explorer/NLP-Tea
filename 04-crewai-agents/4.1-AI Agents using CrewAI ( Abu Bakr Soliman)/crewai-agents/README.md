@@ -25,7 +25,7 @@ This project implements a multi-agent system using CrewAI to automate the proces
    ```bash
    # For Windows
    python -m venv venv
-   .\venv\Scripts\activate
+   source venv\Scripts\activate
    ```
 
 3. Install required packages:
@@ -99,15 +99,6 @@ outputs/
     ├── step_3_scraping_results.json         - Output from web scraping agent
     └── step_4_procurement_report.html       - Final procurement report output (HTML format)
 ```
-
-## Dependencies 📚
-
-- [CrewAI](https://github.com/joaomdmoura/crewAI)
-- [LangChain](https://github.com/langchain-ai/langchain)
-- [AgentOps](https://github.com/AgentOps-AI/agentops)
-- [BeautifulSoup](https://www.crummy.com/software/BeautifulSoup/)
-- [Requests](https://requests.readthedocs.io/)
-- Python 3.10+
 
 ## Usage 🚀
 
