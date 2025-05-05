@@ -3,5 +3,6 @@
 .env
 __pycache__/
 *.pyc
+*.log
 agentops.log
 agentops-tmp.log
