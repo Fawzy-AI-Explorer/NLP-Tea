@@ -1,4 +1,5 @@
 crewai
 agentops
+tavily-python
 scrapegraph-py
 langchain
