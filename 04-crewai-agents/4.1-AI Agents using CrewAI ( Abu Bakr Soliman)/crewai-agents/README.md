@@ -16,21 +16,28 @@ This project implements a multi-agent system using CrewAI to automate the proces
 ## Installation 💻
 
 1. Clone the repository:
-   ```
-   git clone https://github.com/Fawzy-AI-Explorer/crewai-agents.git
-   cd crewai-agents
+   ```bash
+   git clone https://github.com/Fawzy-AI-Explorer/NLP-Tea.git
+   cd NLP-Tea/04-crewai-agents/4.1-AI\ Agents\ using\ CrewAI\ \(\ Abu\ Bakr\ Soliman\)/crewai-agents
    ```
 
-2. Install required packages:
+2. Create and activate a virtual environment (recommended):
+   ```bash
+   # For Windows
+   python -m venv venv
+   .\venv\Scripts\activate
    ```
+
+3. Install required packages:
+   ```bash
    pip install -r requirements.txt
    ```
 
-3. Set up your environment variables:
-   ```
+4. Set up your environment variables:
+   ```bash
    # Create a .env file with your API keys
-   OPENAI_API_KEY=your_openai_api_key
-   AGENTOPS_API_KEY=your_agentops_api_key
+   OPENAI_API_KEY=your_openai_api_key 
+   AGENTOPS_API_KEY=your_agentops_api_key 
    # Add other API keys as needed
    ```
 
@@ -133,51 +140,7 @@ print(results)
 
 ## Complete Workflow 🔄
 
-To run the complete procurement workflow from search queries to final report:
-
-```python
-from crewai_agents.agents.a1_search_queries_agent import SearchQueriesAgent
-from crewai_agents.agents.a2_search_engine_agent import SearchEngineAgent
-from crewai_agents.agents.a3_scraping_agent import ScrapingAgent
-from crewai_agents.agents.a4_procurement_report import ProcurementReportAgent
-from crewai import Crew
-
-# Initialize all agents
-search_queries_agent = SearchQueriesAgent().create()
-search_engine_agent = SearchEngineAgent().create()
-scraping_agent = ScrapingAgent().create()
-procurement_report_agent = ProcurementReportAgent().create()
-
-# Create the crew with all agents
-crew = Crew(
-    agents=[
-        search_queries_agent,
-        search_engine_agent,
-        scraping_agent,
-        procurement_report_agent
-    ],
-    tasks=[
-        search_queries_agent.task,
-        search_engine_agent.task,
-        scraping_agent.task,
-        procurement_report_agent.task
-    ],
-    verbose=True
-)
-
-# Run the crew workflow
-result = crew.kickoff(
-    inputs={
-        "product_category": "office chairs",
-        "requirements": "ergonomic, adjustable height, under $300",
-        "quantity_needed": 20
-    }
-)
-
-print(result)
-```
-
-This workflow:
+workflow:
 1. Generates optimized search queries for your product requirements
 2. Searches e-commerce sites using these queries
 3. Scrapes detailed product information from search results
@@ -185,37 +148,10 @@ This workflow:
 
 ## License 📜
 
-MIT License
-
-Copyright (c) 2023-2025 Fawzy-AI-Explorer
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
-
 ## Contributing 🤝
 
 Contributions are welcome! Please feel free to submit a Pull Request.
 
-## Maintainer 👨‍💻
-
-- [Fawzy-AI-Explorer](https://github.com/Fawzy-AI-Explorer)
-
 ## Acknowledgments 🙏
 
-- Thanks to the [CrewAI](https://github.com/joaomdmoura/crewAI) project for providing the multi-agent framework
-- Special thanks to all contributors and community members
+- Thanks to the [Abu Bakr Soliman](https://www.linkedin.com/in/bakrianoo/) for this [crash course](https://www.youtube.com/watch?v=DDR4A8-MLQs&t=1s)
