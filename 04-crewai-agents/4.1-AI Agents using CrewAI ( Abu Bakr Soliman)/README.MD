@@ -30,4 +30,12 @@
 - **External Help** (tool use or API integration)
 	- AI agent uses outside tools or services to do tasks (Asking other tools to help)
 		- Example: An AI agent that calls Google Translate to Translate or Use calendar to host a meeting.
-		- More powerful and flexible, but sometimes slower or needs internet access.
+		- More powerful and flexible, but sometimes slower or needs internet access.   
+
+## Sequential Flow VS Hierarchical Flow
+[DOC](https://docs.crewai.com/concepts/processes)
+- Sequential Flow : **Agents work one after another**, passing results
+	- A → B → C → D
+- Hierarchical Flow : **One "manager agent" controls or coordinates other agents**, giving them tasks and combining results.
+	- A → B,C || B → F ||
+	- Ensure to provide a manager_llm or manager_agent
