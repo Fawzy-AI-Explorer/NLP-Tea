@@ -1,4 +1,10 @@
 # NLP-Tea 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) 
+[![Python 3.11](https://img.shields.io/badge/python-3.11-blue.svg)](https://www.python.org/downloads/) 
+[![GitHub stars](https://img.shields.io/github/stars/Fawzy-AI-Explorer/Quiz-Generator?style=social)](https://github.com/Fawzy-AI-Explorer/NLP-Tea/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/Fawzy-AI-Explorer/Quiz-Generator?style=social)](https://github.com/Fawzy-AI-Explorer/NLP-Tea/network/members) 
+[![GitHub watchers](https://img.shields.io/github/watchers/Fawzy-AI-Explorer/Quiz-Generator?style=social)](https://github.com/Fawzy-AI-Explorer/NLP-Tea/watchers) 
+[![GitHub](https://img.shields.io/badge/GitHub-View_Project-blue?logo=GitHub)](https://github.com/Fawzy-AI-Explorer/NLP-Tea)
 
 ## Contents
 
