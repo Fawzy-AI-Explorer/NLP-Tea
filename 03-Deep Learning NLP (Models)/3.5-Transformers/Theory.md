@@ -41,7 +41,7 @@ s3 = f (Wys.Y2 + Wss.S2)  || Y3 = softmax (Wsy.S3)
 ---
 ## Attention Mechanism
 To solve the bottleneck issue, the **Attention mechanism** was introduced. Instead of relying on a single context vector, Attention assigns different weights to different parts of the input sequence, allowing the decoder to focus on relevant words at each step.
-- enabling the decoder to look at all encoder outputs.
+- enabling the decoder to look at all encoder outputs (Weighted).
 - Reduces the reliance on a single context vector.
 
 **Benefits of Attention**
@@ -72,5 +72,7 @@ Score (a,b) = a.b or f(W.a + W.b)
 - softmax (α)                      
 - C(0) = SUM (α(i).h(i))                      
 - s(0)~ = tanh (s0, c0)             
-```
+---
+---
 
+##
