@@ -91,3 +91,6 @@ LSTM :
     - 1. C(t)
     - 2. a(t)
     - 3. y(t)
+
+![image](https://github.com/user-attachments/assets/0412a582-44f5-4c49-97fa-beafb49fa610)
+
