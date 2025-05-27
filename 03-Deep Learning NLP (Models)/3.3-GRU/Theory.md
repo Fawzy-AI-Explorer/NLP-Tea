@@ -68,6 +68,7 @@ GRUs use two gates:
 	- Controls **how much past information to forget** while computing the new candidate activation.
 	- Gr = Sig ( Wxr.X(t) + War.a(t-1) + br )
 
+![image](https://github.com/user-attachments/assets/95737e76-f42a-4389-996e-2d662509f5f3)
 
 
 
