@@ -88,35 +88,35 @@ Sentences With n Words , Each Word Represented as vector ( len = 90 )
 ```
 in FC : Input x(Video/Sentence) fed at once 
 
-a = g ( Wx_a . X + bx_a )
-y = g ( Wa_y . a + ba_y )
+a = g ( Wax . X + ba )
+y = g ( Wya . a + by )
 ----------------------------------------
 ----------------------------------------
 
 in RNNs : Work on Steps (X[0], X[1], ......., X[t])    
 
-a(t) = g ( Wx_a . X(t) + a(t-1) + bx_a)
-y(t) = g ( Wa_y . a(t) + ba_y)
+a(t) = g ( Wax . X(t) + Waa . a(t-1) + ba)
+y(t) = g ( Wya . a(t) + by)
 -----------
 a(0) = 0 ===> this is the History >>>>> History Vector Size = Number of Hidden State on RNN Layer
 *****
 a(0) = 0
-a1 = g(Wx_a * X1 + Waa * a0 + bx_a) = g(Wx_a * X1 + bx_a), a(0) = 0 
-y1 = g(Way * a1 + ba_y)
+a1 = g(Wax * X1 + Waa * a0 + ba) 
+y1 = g(Wya * a1 + by)
 *****
-a2 = g(Wx_a * X2 + Waa * a1 + bx_a)
-y2 = g(Way * a2 + ba_y)
+a2 = g(Wax * X2 + Waa * a1 + ba)
+y2 = g(Wya * a2 + by)
 *****
-a3 = g(Wx_a * X3 + Waa * a2 + bx_a)
-   = g(Wx_a * X3 + Waa * (g(Wx_a * X2 + Waa * (g(Wx_a * X1 + Waa * a0 + bx_a)) + bx_a)) + bx_a)
-Wx_a ==> Shared Weights Through Time
+a3 = g(Wax * X3 + Waa * a2 + ba)
+   = g(Wax * X3 + Waa * (g(Wax * X2 + Waa * (g(Wax * X1 + Waa * a0 + ba)) + ba)) + ba)
+Wax ==> Shared Weights Through Time
 Waa  ==> Shared Weights Through Time
 
 y3 = g(Way * a3 + b)
 y3 = g(X3, X2, X1
 
 ```
-
+![alt text](image.png)
 
 ## RNNS Types
 - Ont to One 
@@ -126,9 +126,4 @@ y3 = g(X3, X2, X1
   - Sentiement Analysis 
 - Many to Many
   - Translation 
-
-
-
-
-
 
