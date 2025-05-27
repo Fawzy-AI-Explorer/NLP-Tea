@@ -50,36 +50,27 @@ To solve the bottleneck issue, the **Attention mechanism** was introduced. Inste
 
 ![image](https://github.com/user-attachments/assets/78f2ca58-ddb5-4d22-9a82-4b95f37f6cb0)
 
-1. Calc Score
-Score (a,b) = a.b or f(W.a + W.b)
-        - Score (s0, h1) = α1
-	- Score (s0, h2) = α2
-	- Score (s0, h3) = α3
-2. Soft max over Scores
-	- (α1 + α2 + α3 = 1)
-3. context vector =>>
-	- c(0) = α1.h1 + α2.h2 + α3.h3
-5. Combine Context and Decoder State
-	- s(0)~ = tanh (s0, c0)
-- α(i) = Score (s0, hi)
-- softmax (α)
-- C(0) = SUM (α(i).h(i))
-- s(0)~ = tanh (s0, c0)
-```
-Attention :
-we have from Encoder : h1, h2, h3, ......., hn
-decoder :
-s0 = 0
-
-Attention 1 :
-1. Calc Score (s0, h1) 
-
-                    
-```
-
-
 ![image](https://github.com/user-attachments/assets/8f592f51-285b-41fa-a1b4-9af2a7041526)
 
-
-
+### Attention Block Calculations
+                                                  
+- Inputs : (S(i), h1,h2,h3,.....,hn)                          
+- Output : S(i)~                     
+                                 
+1. Calc Score                                      
+Score (a,b) = a.b or f(W.a + W.b)                      
+        - Score (s0, h1) = α1                       
+	- Score (s0, h2) = α2                                
+	- Score (s0, h3) = α3                                 
+2. Soft max over Scores                          
+	- (α1 + α2 + α3 = 1)                           
+3. context vector =>>                    
+	- c(0) = α1.h1 + α2.h2 + α3.h3            
+5. Combine Context and Decoder State             
+	- s(0)~ = tanh (s0, c0)                   
+- α(i) = Score (s0, hi)               
+- softmax (α)                      
+- C(0) = SUM (α(i).h(i))                      
+- s(0)~ = tanh (s0, c0)             
+```
 
