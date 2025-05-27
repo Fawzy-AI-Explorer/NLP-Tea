@@ -50,7 +50,7 @@ To solve the bottleneck issue, the **Attention mechanism** was introduced. Inste
 
 ![image](https://github.com/user-attachments/assets/78f2ca58-ddb5-4d22-9a82-4b95f37f6cb0)
 
-![image](https://github.com/user-attachments/assets/8f592f51-285b-41fa-a1b4-9af2a7041526)
+![image](https://github.com/user-attachments/assets/9332af03-e0dd-48a3-ae13-dbdd7d8942f4)
 
 ### Attention Block Calculations
                                                   
