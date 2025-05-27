@@ -39,7 +39,7 @@ a(t) = 0.6.a~(t) + 0.4.a(t-1) ==> take 60% from a~(t) and 40% from a(t-1)
 The update gate U decides how much of the previous hidden state (a(t−1) needs to be retained and how much of the new candidate hidden state a~(t) should replace it. 
 
 ```
-Gu => u will take the current time step in history or not ?
+Gu ===> you will take the current time step in history or not ?
 if u need to forget All history and start from current time step
 
 ```
@@ -67,6 +67,18 @@ GRUs use two gates:
 - Relevance Gate (Rt): Decides how much of the past information to forget.
 	- Controls **how much past information to forget** while computing the new candidate activation.
 	- Gr = Sig ( Wxr.X(t) + War.a(t-1) + br )
+
+
+```
+Gu = Sig ( Wxu.X(t) + Wcu.C(t-1) + bu )
+Gr = Sig ( Wxr.X(t) + Wcr.C(t-1) + br )
+
+C~(t) = g (Wax.X(t) + Gr[Waa.C(t-1)] + ba)
+C(t) = Gu.C~(t) + (1-Gu).C(t-1)
+
+Y(t) = g (Wcy.a(t) + by)
+```
+
 
 ![image](https://github.com/user-attachments/assets/95737e76-f42a-4389-996e-2d662509f5f3)
 
