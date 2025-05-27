@@ -116,7 +116,8 @@ y3 = g(Way * a3 + b)
 y3 = g(X3, X2, X1
 
 ```
-![alt text](image.png)
+![image](https://github.com/user-attachments/assets/42614b7e-1e26-4a48-868f-9307161879c1)
+
 
 ## RNNS Types
 - Ont to One 
