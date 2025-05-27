@@ -20,3 +20,5 @@ This architecture was originally built using **Recurrent Neural Networks (RNNs)*
     - Single, fixed-size context vector limits the ability to store long Sequencies.
 - **Sequential Processing (NO parallelize)**: Since RNNs process sequences step-by-step, they cannot be easily parallelized.
 - **Struggles with very long sequences**: LSTMs and GRUs still struggle with very long dependencies, even though they improve over simple RNNs.
+
+![image](https://github.com/user-attachments/assets/b969347c-30b1-4968-a513-a906c9d80cb4)
