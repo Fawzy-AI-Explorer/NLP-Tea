@@ -203,25 +203,24 @@ A limitation of One-Hot Encoding is that the distance between the one-hot encode
 
 <details><summary><h3>Q19. Derive Cost Function for Skip-Gram Model</h3></summary>
 
-- The network predicts the probability of a context word given a target word:
-  $$
-  P(w_\text{context}|w_\text{center};\theta) = \frac{e^{W_{\text{output}_{(c)}} \cdot h}}{\sum_{i=1}^{V} e^{W_{\text{output}_{i}} \cdot h}}
-  $$
-- Objective is to maximize the log-likelihood of the context words given the target word:
-  $$
-  J(\theta) = \argmax_\theta \log \prod_{w_\text{context} \in C(w_\text{center})} P(w_\text{context}|w_\text{center};\theta)
-  = \argmax_\theta \log \prod_{c=1}^{C} \frac{e^{W_{\text{output}_{(c)}} \cdot h}}{\sum_{i=1}^{V} e^{W_{\text{output}_{i}} \cdot h}}
-  $$
-
-- Converting objective to a loss function:
-  $$
+- The network predicts the probability of a context word given a target word:  
+```math
+P(w_\text{context}|w_\text{center};\theta)=\frac{e^{W_{\text{output}_{(c)}} \cdot h}}{\sum_{i=1}^{V} e^{W_{\text{output}_{i}} \cdot h}}
+```  
+- Objective is to maximize the log-likelihood of the context words given the target word:  
+```math
+J(\theta) = arg\max_\theta \log \prod_{w_\text{context} \in C(w_\text{center})} P(w_\text{context}|w_\text{center};\theta)=arg\max_\theta \log \prod_{c=1}^{C} \frac{e^{W_{\text{output}_{(c)}} \cdot h}}{\sum_{i=1}^{V} e^{W_{\text{output}_{i}} \cdot h}}
+```  
+- Converting objective to a loss function:  
+```math
   L(\theta; w^{(t)}) = - \log \prod_{c=1}^{C} \frac{e^{W_{\text{output}_{(c)}} \cdot h}}{\sum_{i=1}^{V} e^{W_{\text{output}_{i}} \cdot h}} = -\sum_{c=1}^{C} \log \frac{e^{W_{\text{output}_{(c)}} \cdot h}}{\sum_{i=1}^{V} e^{W_{\text{output}_{i}} \cdot h}}
-  $$
-  $$
+```
+```math
   L(\theta; w^{(t)}) = - \sum \log P(w_\text{context}|w_\text{center};\theta)
-  $$
+```
 
 </details>
+
 
 <details><summary><h3>Q20. What is the problems with Skip-Gram?</h3></summary>
 
