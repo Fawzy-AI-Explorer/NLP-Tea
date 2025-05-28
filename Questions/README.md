@@ -216,9 +216,8 @@ A limitation of One-Hot Encoding is that the distance between the one-hot encode
 - Converting objective to a loss function:
   $$
   L(\theta; w^{(t)}) = - \log \prod_{c=1}^{C} \frac{e^{W_{\text{output}_{(c)}} \cdot h}}{\sum_{i=1}^{V} e^{W_{\text{output}_{i}} \cdot h}} = -\sum_{c=1}^{C} \log \frac{e^{W_{\text{output}_{(c)}} \cdot h}}{\sum_{i=1}^{V} e^{W_{\text{output}_{i}} \cdot h}}
-  
-  \newline
-  \text{equivalent to:}
+  $$
+  $$
   L(\theta; w^{(t)}) = - \sum \log P(w_\text{context}|w_\text{center};\theta)
   $$
 
