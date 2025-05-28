@@ -94,7 +94,6 @@ For documents not considered during vocab desing, they may contain some words no
 <details><summary><h3>Q11. What is TF-IDF Tries to do?</h3></summary>
 
 Tries to highlight words that are more interesting:
-
 Terms that are (1) Frequent in a document and (2) Less frequent  across documents
 
 </details>
@@ -120,14 +119,19 @@ Terms that are (1) Frequent in a document and (2) Less frequent  across document
 </details>
 
 <details><summary><h3>Q13.What is Window Size in Word2Vec?</h3></summary>
+
 - Window Size:
-    - The number of words to consider on either side of the target word.
-    - Number of context words to consider = 2 * window size.
+  - The number of words to consider on either side of the target word.
+  - Number of context words to consider = 2 * window size.
+
 </details>
 
 <details><summary><h3>Q14.what is the goal of Word2Vec?</h3></summary>
+
 - The goal of Word2Vec is to learn vector representations of words such that words with similar meanings are close together in the vector space.
+
 - Not to predict the next word in a sentence.
+
 </details>
 
 <details><summary><h3>Q15.What is Negative Sampling in Word2Vec?</h3></summary>
@@ -138,6 +142,8 @@ Terms that are (1) Frequent in a document and (2) Less frequent  across document
   - it converts the multi-class classification problem into a binary classification problem.
   - it uses sigmoid instead of softmax.
   - for each target word, K negative samples are randomly selected from the vocabulary.
+- Architecture:
+  ![alt text](assets/image3.png)
 
 </details>
 
@@ -150,8 +156,8 @@ Terms that are (1) Frequent in a document and (2) Less frequent  across document
   - (language, love), (language, natural), (language, processing)  we have 9 negative samples  all = 9 + 3 = 12 pairs of training data.
   - (processing, natural), (processing, language) we have 6 negative samples   all = 6 + 2 = 8 pairs of training data.
   - Total pairs = 8 + 12 + 16 + 12 + 8 = 56 pairs of training data.
-</details>
 
+</details>
 
 <details><summary><h3>Q17. What are the Training steps for a Negative Sampling mode?</h3></summary>
 
@@ -186,5 +192,56 @@ Training steps for a Negative Sampling model:
 7. **Repeat:**
 
   * Perform the above steps for all (target, context) pairs across multiple epochs.
+
+</details>
+
+<details><summary><h3>Q18. What is a limitation of One-Hot Encoding regarding word relationships?</h3></summary>
+
+A limitation of One-Hot Encoding is that the distance between the one-hot encoded vectors of any two different words is the same. This means it does not capture any semantic similarity or relationship between words, only their distinct identity.
+
+</details>
+
+<details><summary><h3>Q19. Derive Cost Function for Skip-Gram Model</h3></summary>
+
+- The network predicts the probability of a context word given a target word:
+  $$
+  P(w_\text{context}|w_\text{center};\theta) = \frac{e^{W_{\text{output}_{(c)}} \cdot h}}{\sum_{i=1}^{V} e^{W_{\text{output}_{i}} \cdot h}}
+  $$
+- Objective is to maximize the log-likelihood of the context words given the target word:
+  $$
+  J(\theta) = \argmax_\theta \log \prod_{w_\text{context} \in C(w_\text{center})} P(w_\text{context}|w_\text{center};\theta)
+  = \argmax_\theta \log \prod_{c=1}^{C} \frac{e^{W_{\text{output}_{(c)}} \cdot h}}{\sum_{i=1}^{V} e^{W_{\text{output}_{i}} \cdot h}}
+  $$
+
+- Converting objective to a loss function:
+  $$
+  L(\theta; w^{(t)}) = - \log \prod_{c=1}^{C} \frac{e^{W_{\text{output}_{(c)}} \cdot h}}{\sum_{i=1}^{V} e^{W_{\text{output}_{i}} \cdot h}} = -\sum_{c=1}^{C} \log \frac{e^{W_{\text{output}_{(c)}} \cdot h}}{\sum_{i=1}^{V} e^{W_{\text{output}_{i}} \cdot h}}
+  
+  \newline
+  \text{equivalent to:}
+  L(\theta; w^{(t)}) = - \sum \log P(w_\text{context}|w_\text{center};\theta)
+  $$
+
+</details>
+
+<details><summary><h3>Q20. What is the problems with Skip-Gram?</h3></summary>
+
+- Softmax is applied to the values of the output layer, which can be computationally very expensive for large vocabularies.
+
+</details>
+
+<details><summary><h3>Q21. Why using sigmoid instead of softmax in Negative Sampling?</h3></summary>
+
+Negative sampling converts multi-classification task into binary-classification task.
+ The new objective is to predict, for any given word-context pair (w,c), whether the word (c) 
+is in the context window of the the center word (w) or not.
+
+</details>
+
+<details><summary><h3>Q22. How to Get “Embeddings” from Negative Sampling Model?</h3></summary>
+
+To get word embeddings for entire vocabulary:
+Extract the embeddings from  word_model embedding layer.
+(use Target wordEmbedding NOT Context wordembedding)
 
 </details>
