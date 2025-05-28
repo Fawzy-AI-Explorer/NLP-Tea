@@ -2,9 +2,7 @@
 
 ## Preprocessing
 
-<details><summary><h3>1. What are preprocessing steps/techniques in NLP?</h3></summary>
-
-----
+<details><summary><h3>Q1. What are preprocessing steps/techniques in NLP?</h3></summary>
 
 - Remove tags
 - Case normalization
