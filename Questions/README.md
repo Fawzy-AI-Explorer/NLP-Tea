@@ -224,14 +224,14 @@ J(\theta) = arg\max_\theta \log \prod_{w_\text{context} \in C(w_\text{center})} 
 
 <details><summary><h3>Q20. What is the problems with Skip-Gram?</h3></summary>
 
-- Softmax is applied to the values of the output layer, which can be computationally very expensive for large vocabularies.
+Softmax is applied to the values of the output layer, which can be computationally very expensive for large vocabularies.
 
 </details>
 
 <details><summary><h3>Q21. Why using sigmoid instead of softmax in Negative Sampling?</h3></summary>
 
 Negative sampling converts multi-classification task into binary-classification task.
- The new objective is to predict, for any given word-context pair (w,c), whether the word (c) 
+The new objective is to predict, for any given word-context pair (w,c), whether the word (c) 
 is in the context window of the the center word (w) or not.
 
 </details>
@@ -243,3 +243,61 @@ Extract the embeddings from  word_model embedding layer.
 (use Target wordEmbedding NOT Context wordembedding)
 
 </details>
+
+<details><summary><h3>Q23. What are the limitations of Word2Vec?</h3></summary>
+
+- Out-of-vocabulary (OOV) words: Words not seen during training are ignored.
+- Morpohological variations: Different forms of a word (e.g., "run", "running") are treated as distinct words.
+
+</details>
+
+<details><summary><h3>Q24. What is the FastText Objective?</h3></summary>
+
+Utilizing the internal structure of words to make the process of learning word embeddings more efficient.
+
+</details>
+
+<details><summary><h3>Q25. What is the main difference between Word2Vec and FastText?</h3></summary>
+
+- Word2Vec representation is word-based
+- FastText representation is character n-gram based.
+
+</details>
+
+<details><summary><h3>Q26. What is the main advantage of FastText over Word2Vec?</h3></summary>
+
+In FastText, Representing out-of-vocab words by summing their sub-words has performance than assigning null vectors like Word2Vec.  
+
+FastText generally has better performance than Baseline Word2Vec algorithms (CBOW and SkipGram) even with OOV.
+
+</details>
+
+<details><summary><h3>Q27. What are the steps for Skip-Gram Representation Of FastText Embedding?</h3></summary>
+
+1. **Select Target and Context Words**
+   - Using a sliding window of size 2C+1, where C is the context size.
+2. **Select Negative Samples for each context word**
+   - For one actual context word, “N” random negative words are sampled  (e.g. N=5)
+3. **Sub-word generation**
+   - By creating character n-grams (length 3–6) from words enclosed in angle brackets.
+4. **Prepare Vectors for Target, Context, and Negative Words**
+   - Target word vector: Sum of vectors of all sub-words.
+5. **Train Neural Network with:** two inputs, one hidden layer and one segmoid output
+   - By maximizing similarity with context words and minimizing similarity with negative samples using a neural network.
+  - Architecture:
+  - ![alt text](assets/image4.png)
+</details>
+
+<details><summary><h3>Q28. What is the goal of stemming and lemmatization and what is the difference between them?</h3></summary>
+
+- **Goal**: Reduce words to a common base form.
+
+- **Stemming**: is the process that stems or removes last few characters from a word, often leading to incorrect meanings and spelling.
+  - For example, Caring becomes Car, and Cars becomes Car.
+  - Used in case of large datasets where performance is an issue.
+- **Lemmatization**: considers the context and converts the word to its meaningful base form.
+  - For example, Caring becomes Care, and Cars becomes Car.
+  - Used in case of small datasets where accuracy is an issue, because its computationally expensive.
+
+</details>
+
