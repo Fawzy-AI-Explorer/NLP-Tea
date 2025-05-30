@@ -555,6 +555,6 @@ $W_{uc}$ can Do the same functionality It can Control the amount of relevance of
   - If $G_i=1$, Update Memory Value "$C_{t}$" with Candidate Memory Value "$\tilde{C}$".
 - **Output Gate**: Controls how much of the cell state $C_t$ should be used for the output.
   - If $G_o=0$, Do Not Output Memory Value "$C_{t}$".
-  - If $G_o=1$, Output Memory Value "$C_{t}$".
+  - If $G_o=1$, Output Memory Value " $C_{t}$ ".
 
 </details>
