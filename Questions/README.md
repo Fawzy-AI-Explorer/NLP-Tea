@@ -445,7 +445,7 @@ o_t = V s_t}
 
 ```math
 \displaylines{E_t(y_t,\hat{y}_t) = -y_t \log(\hat{y}_t)\\
-E(y, \hat{y}) = \sum_{t=1}^{T} L_t}
+E(y, \hat{y}) = \sum_{t=1}^{T} E_t(y_t,\hat{y}_t)}
 ```
 
 **Gradients:**
