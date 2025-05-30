@@ -436,16 +436,16 @@ P(w_2|w_1) = \frac{\text{count}(w_1, w_2)}{\text{count}(w_1)}\\
 **Forawrd Calculation:**
 
 ```math
-s_t = \tanh{(W s_{t-1} + U x_t)}\\\\
-\hat{y}_t = \text{softmax}(o_t) = \text{softmax}(V s_t)\\\\
-o_t = V s_t\\\\
+\displaylines{s_t = \tanh{(W s_{t-1} + U x_t)}\\
+\hat{y}_t = \text{softmax}(o_t) = \text{softmax}(V s_t)\\
+o_t = V s_t}
 ```
 
 **Loss and Cost Function:**
 
 ```math
-E_t(y_t,\hat{y}_t) = -y_t \log(\hat{y}_t)\\\\
-C = \sum_{t=1}^{T} L_t\\\\
+\displaylines{E_t(y_t,\hat{y}_t) = -y_t \log(\hat{y}_t)\\
+C = \sum_{t=1}^{T} L_t}
 ```
 
 **Gradients:**
@@ -459,19 +459,19 @@ C = \sum_{t=1}^{T} L_t\\\\
 **Gradients by Chain Rule:**
 
 ```math
-\frac{\partial E_t}{\partial V} = \frac{\partial E_t}{\partial \hat{y}_t} \cdot \frac{\partial \hat{y}_t}{\partial o_t} \cdot \frac{\partial o_t}{\partial V}\ (1)\\
+\displaylines{\frac{\partial E_t}{\partial V} = \frac{\partial E_t}{\partial \hat{y}_t} \cdot \frac{\partial \hat{y}_t}{\partial o_t} \cdot \frac{\partial o_t}{\partial V}\ (1)\\
 
-\frac{\partial E_t}{\partial U} = \frac{\partial E_t}{\partial \hat{y}_t} \cdot \frac{\partial \hat{y}_t}{\partial s_t} \cdot \frac{\partial s_t}{\partial U}\\\\
+\frac{\partial E_t}{\partial U} = \frac{\partial E_t}{\partial \hat{y}_t} \cdot \frac{\partial \hat{y}_t}{\partial s_t} \cdot \frac{\partial s_t}{\partial U}\\
 
 \frac{\partial s_t}{\partial U} = \sum_{t'=1}^{T} \frac{\partial s_{t}}{\partial s_t'} \cdot \frac{\partial s_t'}{\partial U}\\
 
-\frac{\partial E_t}{\partial U} = \sum_{t'=1}^{T} \frac{\partial E_t}{\partial \hat{y}_t} \cdot \frac{\partial \hat{y}_t}{\partial s_t} \cdot \frac{\partial s_{t}}{\partial s_t'} \cdot \frac{\partial s_t'}{\partial U}\ (2)\\\\
+\frac{\partial E_t}{\partial U} = \sum_{t'=1}^{T} \frac{\partial E_t}{\partial \hat{y}_t} \cdot \frac{\partial \hat{y}_t}{\partial s_t} \cdot \frac{\partial s_{t}}{\partial s_t'} \cdot \frac{\partial s_t'}{\partial U}\ (2)\\
 
-\frac{\partial E_t}{\partial W} = \frac{\partial E_t}{\partial \hat{y}_t} \cdot \frac{\partial \hat{y}_t}{\partial s_t} \cdot \frac{\partial s_t}{\partial W}\\\\
+\frac{\partial E_t}{\partial W} = \frac{\partial E_t}{\partial \hat{y}_t} \cdot \frac{\partial \hat{y}_t}{\partial s_t} \cdot \frac{\partial s_t}{\partial W}\\
 
 \frac{\partial s_t}{\partial W} = \sum_{t'=1}^{T} \frac{\partial s_{t}}{\partial s_t'} \cdot \frac{\partial s_t'}{\partial W}\\
 
-\frac{\partial E_t}{\partial W} = \sum_{t'=1}^{T} \frac{\partial E_t}{\partial \hat{y}_t} \cdot \frac{\partial \hat{y}_t}{\partial s_t} \cdot \frac{\partial s_{t}}{\partial s_t'} \cdot \frac{\partial s_t'}{\partial W}\ (3)\\\\
+\frac{\partial E_t}{\partial W} = \sum_{t'=1}^{T} \frac{\partial E_t}{\partial \hat{y}_t} \cdot \frac{\partial \hat{y}_t}{\partial s_t} \cdot \frac{\partial s_{t}}{\partial s_t'} \cdot \frac{\partial s_t'}{\partial W}\ (3)}
 
 ```
 
