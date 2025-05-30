@@ -14,6 +14,8 @@
 
 </details>
 
+---
+
 ## Feature Extraction
 
 <details><summary><h3>Q2. What are two main approaches for word embedding?</h3></summary>
