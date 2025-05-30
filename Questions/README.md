@@ -478,11 +478,11 @@ C = \sum_{t=1}^{T} L_t\\\\
 **Backpropagation Equations:**
 
 ```math
-\frac{\partial E}{\partial V} = \sum_{t=1}^{T} \frac{\partial E_t}{\partial V} = \sum_{t=1}^{T} \left( \frac{\partial E_t}{\partial \hat{y}_t} \cdot \frac{\partial \hat{y}_t}{\partial o_t} \cdot \frac{\partial o_t}{\partial V} \right)\\\\
+\displaylines{\frac{\partial E}{\partial V} = \sum_{t=1}^{T} \frac{\partial E_t}{\partial V} = \sum_{t=1}^{T} \left( \frac{\partial E_t}{\partial \hat{y}_t} \cdot \frac{\partial \hat{y}_t}{\partial o_t} \cdot \frac{\partial o_t}{\partial V} \right) \\
 
-\frac{\partial E}{\partial U} = \sum_{t=1}^{T} \frac{\partial E_t}{\partial U} = \sum_{t=1}^{T} \left( \sum_{t'=1}^{T} \frac{\partial E_t}{\partial \hat{y}_t} \cdot \frac{\partial \hat{y}_t}{\partial s_t} \cdot \frac{\partial s_{t}}{\partial s_t'} \cdot \frac{\partial s_t'}{\partial U} \right)\\\\
+\frac{\partial E}{\partial U} = \sum_{t=1}^{T} \frac{\partial E_t}{\partial U} = \sum_{t=1}^{T} \left( \sum_{t'=1}^{T} \frac{\partial E_t}{\partial \hat{y}_t} \cdot \frac{\partial \hat{y}_t}{\partial s_t} \cdot \frac{\partial s_{t}}{\partial s_t'} \cdot \frac{\partial s_t'}{\partial U} \right) \\
 
-\frac{\partial E}{\partial W} = \sum_{t=1}^{T} \frac{\partial E_t}{\partial W} = \sum_{t=1}^{T} \left( \sum_{t'=1}^{T} \frac{\partial E_t}{\partial \hat{y}_t} \cdot \frac{\partial \hat{y}_t}{\partial s_t} \cdot \frac{\partial s_{t}}{\partial s_t'} \cdot \frac{\partial s_t'}{\partial W} \right)
+\frac{\partial E}{\partial W} = \sum_{t=1}^{T} \frac{\partial E_t}{\partial W} = \sum_{t=1}^{T} \left( \sum_{t'=1}^{T} \frac{\partial E_t}{\partial \hat{y}_t} \cdot \frac{\partial \hat{y}_t}{\partial s_t} \cdot \frac{\partial s_{t}}{\partial s_t'} \cdot \frac{\partial s_t'}{\partial W} \right)}
 ```
 
 </details>
