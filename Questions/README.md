@@ -300,3 +300,73 @@ FastText generally has better performance than Baseline Word2Vec algorithms (CBO
   - Used in case of small datasets where accuracy is an issue, because its computationally expensive.
 
 </details>
+
+---
+
+## Classification
+
+<details><summary><h3>Q1. What are two types of time-idexed data?</h3></summary>
+
+- **Equally spaced**: Data points are collected at regular intervals (e.g., daily, monthly).
+- **Ordinal time steps**: Data points are collected at irregular intervals, but the order of events is preserved (e.g., word sequences).
+
+</details>
+
+<details><summary><h3>Q2. Given the following architecture, what is the output shape and number of parameters of each layer?</h3>
+
+- **Architecture**:
+  - ![alt text](assets/image5.png)
+
+</summary>
+
+- **Answer**:
+  - ![alt text](assets/image6.png)
+
+</details>
+
+<details><summary><h3>Q3. What is the difference between 1D, 2D, and 3D convolution?</h3></summary>
+
+- ID CNN,
+  - kernel moves in 1 direction.
+  - Input and output data of ID CNN is 2 dimensional.
+  - Mostly used on Time-Series data.
+- 2D CNN,
+  - kernel moves in 2 directions.
+  - Input and output data of 2D CNN is 3 dimensional.
+  - Mostly used on Image data
+- 3D CNN,
+  - kernel moves in 3 directions.
+  - Input and output data of 3D CNN is 4 dimensional.
+  - Mostly used on 3D Image data (MRI, CT Scans).
+
+</details>
+
+<details><summary><h3>Q4. What are the steps to apply 1D CNN for text classification?</h3></summary>
+
+1. **Word Tokenization**:
+   - Represented in a dictionary that maps each unique word to their token, {'the': 0, 'of': 1, 'so': 2, 'then': 3, 'you': 4, … }
+   - Vocab: all unique words in the text.
+   - Token: a unique integer assigned to each word in the vocab.
+2. **Word One-Hot Encoding**:
+   - ![alt text](assets/image7.png)
+3. **Word Embedding**:
+   - ![alt text](assets/image8.png)
+4. **Convolutional Kernel**:
+   - ![alt text](assets/image9.png)
+
+</details>
+
+<details><summary><h3>Q5. Why using Max-Pooling over Time></h3></summary>
+
+In order to indicate the presence of these high-level features, we need a way to identify them in a vector, regardless of the location within the larger input sequence. One way to identify important features, no matter their location in a sequence, is to discard less-relevant, locational information.
+
+![alt text](assets/image10.png)
+
+</details>
+
+<details><summary><h3>Q6. Draw the architecture for using multiple kernels with different scales in 1D CNN.</h3></summary>
+
+![alt text](assets/image11.png)
+
+</details>
+
