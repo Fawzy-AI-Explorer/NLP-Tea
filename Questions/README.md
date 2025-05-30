@@ -504,3 +504,57 @@ Vanishing completely after a few time steps.
 - If the gradients **grow exponentially**, it leads to the **Exploding Gradient Problem** — this is **not** due to the tanh function itself, but rather due to how gradients accumulate through time.
 
 </details>
+
+<details><summary><h3>Q16. Draw RNN Unit Architecture</h3></summary>
+
+![alt text](assets/image19.png)
+
+</details>
+
+<details><summary><h3>Q17. Draw GRU Unit Architecture</h3></summary>
+
+![alt text](assets/image20.png)
+
+</details>
+
+<details><summary><h3>Q18. Draw LSTM Unit Architecture</h3></summary>
+
+![alt text](assets/image22.png)
+
+</details>
+
+<details><summary><h3>Q19. What are the gates in GRU and what are their functions/effects?</h3></summary>
+
+- **Update Gate**: Controls how much of the past information to keep and how much to update with new information.
+  - If $G_u=0$, Keep Memory Value "$C_{t}$" Same as the previous Value "$C_{t-1}$".
+  - If $G_u=1$, Forget Previous Memory Value "$C_{t-1}$".
+
+- **Relevance Gate**: Controls how much of the new information to add to the memory.
+  - If $G_r=1$, $C_{t-1}$ is Relevant to update Candidate Memory Value "$\tilde{C}$".
+  - If $G_r=0$, $C_{t-1}$ is Not Relevant to update Candidate Memory Value "$\tilde{C}$".
+
+- If $G_u=1$ and $G_r=0$, Traditional NN (No Recurrency).
+- If $G_u=1$ and $G_r=1$, RNN (Not GRU).
+- If $G_u= 0 \rightarrow 1$ and $G_r= 0 \rightarrow 1$, GRU (General Case).
+
+</details>
+
+<details><summary><h3>Q20. In LSTM, Why we removed relevance gate?</h3></summary>
+
+$W_{uc}$ can Do the same functionality It can Control the amount of relevance of $C_{t-1}$
+
+</details>
+
+<details><summary><h3>Q21. What are the gates in LSTM and what are their functions/effects?</h3></summary>
+
+- **Forget Gate**: Decides what portion of the previous memory $C_{t-1}$ to forget.
+  - If $G_f=0$, Forget Previous Memory Value "$C_{t-1}$".
+  - If $G_f=1$, Keep Memory Value "$C_{t}$" Same as the previous Value "$C_{t-1}$".
+- **Input Gate**: Controls how much of the new candidate information $\tilde{C}$ to add to the memory.
+  - If $G_i=0$, Do Not Update Memory Value "$C_{t}$".
+  - If $G_i=1$, Update Memory Value "$C_{t}$" with Candidate Memory Value "$\tilde{C}$".
+- **Output Gate**: Controls how much of the cell state $C_t$ should be used for the output.
+  - If $G_o=0$, Do Not Output Memory Value "$C_{t}$".
+  - If $G_o=1$, Output Memory Value "$C_{t}$".
+
+</details>
