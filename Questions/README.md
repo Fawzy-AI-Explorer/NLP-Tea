@@ -379,13 +379,15 @@ A language model computes a probability for a sequence of words: $P(w_1, ..., w_
 Example: Zein is playing football
 
 ```math
-P(\text{Zein is playing football}) = P(w_1, w_2, w_3, w_4)\\
+\displaylines{P(\text{Zein is playing football}) = P(w_1, w_2, w_3, w_4)\\
+
 P(\text{Zein is playing football}) = P(w_1) * P(w_2|w_1) * P(w_3|w_1, w_2) * P(w_4|w_1, w_2, w_3)\\
-P(\text{Zein is playing football}) = P(\text{Zein}) * P(\text{is}|\text{Zein}) * P(\text{playing}|\text{Zein}, \text{is}) * P(\text{football}|\text{Zein}, \text{is}, \text{playing})
+
+P(\text{Zein is playing football}) = P(\text{Zein}) * P(\text{is}|\text{Zein}) * P(\text{playing}|\text{Zein}, \text{is}) * P(\text{football}|\text{Zein}, \text{is}, \text{playing})}
 ```
 
 ```math
-P(w_2|w_1) = \frac{\text{count}(w_1, w_2)}{\text{count}(w_1)}\\
+P(w_2|w_1) = \frac{\text{count}(w_1, w_2)}{\text{count}(w_1)}
 ```
 
 </details>
