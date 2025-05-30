@@ -374,9 +374,9 @@ In order to indicate the presence of these high-level features, we need a way to
 
 <details><summary><h3>Q7. What are the Traditional Language Models?</h3></summary>
 
-A language model computes a probability for a sequence of words: $P(w_1, ..., w_T)$
+A language model computes a probability for a sequence of words: $P(w_1, ..., w_T)$  
 
-Example: Zein is playing football
+Example: Zein is playing football  
 
 ```math
 \displaylines{P(\text{Zein is playing football}) = P(w_1, w_2, w_3, w_4)\\
