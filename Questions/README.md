@@ -372,3 +372,122 @@ In order to indicate the presence of these high-level features, we need a way to
 
 </details>
 
+<details><summary><h3>Q7. What are the Traditional Language Models?</h3></summary>
+
+A language model computes a probability for a sequence of words: $P(w_1, ..., w_T)$
+
+Example: Zein is playing football
+
+```math
+P(\text{Zein is playing football}) = P(w_1, w_2, w_3, w_4)\\
+P(\text{Zein is playing football}) = P(w_1) * P(w_2|w_1) * P(w_3|w_1, w_2) * P(w_4|w_1, w_2, w_3)\\
+P(\text{Zein is playing football}) = P(\text{Zein}) * P(\text{is}|\text{Zein}) * P(\text{playing}|\text{Zein}, \text{is}) * P(\text{football}|\text{Zein}, \text{is}, \text{playing})
+```
+
+```math
+P(w_2|w_1) = \frac{\text{count}(w_1, w_2)}{\text{count}(w_1)}\\
+```
+
+</details>
+
+<details><summary><h3>Q8. Draw RNN architecture (Folded and Unfolded)</h3></summary>
+
+![alt text](assets/image12.png)
+
+</details>
+
+<details><summary><h3>Q9. Draw Unfolded RNN architecture with multiple hidden layers</h3></summary>
+
+![alt text](assets/image13.png)
+
+</details>
+
+<details><summary><h3>Q10. Give 4 examples of RNN/LSTM applications specific the type of the task and draw the architecture for each.</h3></summary>
+
+![alt text](assets/image14.png)
+
+</details>
+
+<details><summary><h3>Q11. Draw the **Generation** Model Architecture for RNN</h3></summary>
+
+![alt text](assets/image15.png)
+
+</details>
+
+<details><summary><h3>Q12. Complete the following table</h3>
+
+![alt text](assets/image16.png)
+
+</summary>
+
+**Answer**:
+![alt text](assets/image17.png)
+
+</details>
+
+<details><summary><h3>Q13. For the following RNN architecture, Derive the Backpropagation equations (BPTT), hidden activation is `tanh` output activation is `softmax`</h3>
+
+![alt text](assets/image18.png)
+
+</summary>
+
+**Answer**:
+
+**Forawrd Calculation:**
+```math
+s_t = \tanh{(W s_{t-1} + U x_t)}\\
+\hat{y}_t = \text{softmax}(o_t) = \text{softmax}(V s_t)\\
+o_t = V s_t\\
+```
+
+**Loss and Cost Function:**
+```math
+E_t(y_t,\hat{y}_t) = -y_t \log(\hat{y}_t)\\
+C = \sum_{t=1}^{T} L_t\\
+```
+
+**Gradients:**
+```math
+\frac{\partial E}{\partial V} = \sum_{t=1}^{T} \frac{\partial E_t}{\partial V},\space
+\frac{\partial E}{\partial U} = \sum_{t=1}^{T} \frac{\partial E_t}{\partial U}, \space
+\frac{\partial E}{\partial W} = \sum_{t=1}^{T} \frac{\partial E_t}{\partial W}
+```
+
+**Gradients by Chain Rule:**
+
+```math
+\frac{\partial E_t}{\partial V} = \frac{\partial E_t}{\partial \hat{y}_t} \cdot \frac{\partial \hat{y}_t}{\partial o_t} \cdot \frac{\partial o_t}{\partial V}\ (1)\\
+
+\frac{\partial E_t}{\partial U} = \frac{\partial E_t}{\partial \hat{y}_t} \cdot \frac{\partial \hat{y}_t}{\partial s_t} \cdot \frac{\partial s_t}{\partial U}\\
+
+\frac{\partial s_t}{\partial U} = \sum_{t'=1}^{T} \frac{\partial s_{t}}{\partial s_t'} \cdot \frac{\partial s_t'}{\partial U}\\
+
+\frac{\partial E_t}{\partial U} = \sum_{t'=1}^{T} \frac{\partial E_t}{\partial \hat{y}_t} \cdot \frac{\partial \hat{y}_t}{\partial s_t} \cdot \frac{\partial s_{t}}{\partial s_t'} \cdot \frac{\partial s_t'}{\partial U}\ (2)\\
+
+\frac{\partial E_t}{\partial W} = \frac{\partial E_t}{\partial \hat{y}_t} \cdot \frac{\partial \hat{y}_t}{\partial s_t} \cdot \frac{\partial s_t}{\partial W}\\
+
+\frac{\partial s_t}{\partial W} = \sum_{t'=1}^{T} \frac{\partial s_{t}}{\partial s_t'} \cdot \frac{\partial s_t'}{\partial W}\\
+
+\frac{\partial E_t}{\partial W} = \sum_{t'=1}^{T} \frac{\partial E_t}{\partial \hat{y}_t} \cdot \frac{\partial \hat{y}_t}{\partial s_t} \cdot \frac{\partial s_{t}}{\partial s_t'} \cdot \frac{\partial s_t'}{\partial W}\ (3)\\
+
+```
+
+</details>
+
+<details><summary><h3>Q14. What is the problems with RNNs?</h3></summary>
+
+Error Gradients pass through nonlinearity every step  
+Saturation at both ends ==> zero gradient  
+Vanishing completely after a few time steps.  
+
+</details>
+
+<details><summary><h3>Q15. What is the problem with tanh activation in RNNs?</h3></summary>
+
+- The **derivative of tanh** ranges between **0 and 1**.
+
+- When the **tanh derivative is small**, the gradients **shrink** exponentially over time steps $\rightarrow$ this leads to the **Vanishing Gradient Problem**.
+
+- If the gradients **grow exponentially**, it leads to the **Exploding Gradient Problem** — this is **not** due to the tanh function itself, but rather due to how gradients accumulate through time.
+
+</details>
