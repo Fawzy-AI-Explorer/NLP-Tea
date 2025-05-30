@@ -164,34 +164,27 @@ Terms that are (1) Frequent in a document and (2) Less frequent  across document
 Training steps for a Negative Sampling model:
 
 1. **Input:**
-
-- One input target word + one positive/negative word (one-hot encoded).
+   - One input target word + one positive/negative word (one-hot encoded).
 
 2. **Label Assignment:**
-
-  - Positive sample → **Y = 1**
-  - Negative sample → **Y = 0**
+   - Positive sample → **Y = 1**
+   - Negative sample → **Y = 0**
 
 3. **Embedding:**
-
-  * Pass both words through **separate embedding layers** (output: dense vectors of size `embed_size`).
+   - Pass both words through **separate embedding layers** (output: dense vectors of size `embed_size`).
 
 4. **Similarity Calculation:**
-
-  * Compute **dot product** of the two embeddings.
+   - Compute **dot product** of the two embeddings.
 
 5. **Activation:**
-
-  * Apply **sigmoid** to dot product → outputs a value between 0 and 1.
+   - Apply **sigmoid** to dot product → outputs a value between 0 and 1.
 
 6. **Loss and Backpropagation:**
-
-  * Compare sigmoid output to actual label Y.
-  * Compute loss and **backpropagate** error to update weights.
+   - Compare sigmoid output to actual label Y.
+   - Compute loss and **backpropagate** error to update weights.
 
 7. **Repeat:**
-
-  * Perform the above steps for all (target, context) pairs across multiple epochs.
+   - Perform the above steps for all (target, context) pairs across multiple epochs.
 
 </details>
 
@@ -204,17 +197,23 @@ A limitation of One-Hot Encoding is that the distance between the one-hot encode
 <details><summary><h3>Q19. Derive Cost Function for Skip-Gram Model</h3></summary>
 
 - The network predicts the probability of a context word given a target word:  
+
 ```math
 P(w_\text{context}|w_\text{center};\theta)=\frac{e^{W_{\text{output}_{(c)}} \cdot h}}{\sum_{i=1}^{V} e^{W_{\text{output}_{i}} \cdot h}}
 ```  
-- Objective is to maximize the log-likelihood of the context words given the target word:  
+
+- Objective is to maximize the log-likelihood of the context words given the target word:
+
 ```math
 J(\theta) = arg\max_\theta \log \prod_{w_\text{context} \in C(w_\text{center})} P(w_\text{context}|w_\text{center};\theta)=arg\max_\theta \log \prod_{c=1}^{C} \frac{e^{W_{\text{output}_{(c)}} \cdot h}}{\sum_{i=1}^{V} e^{W_{\text{output}_{i}} \cdot h}}
 ```  
+
 - Converting objective to a loss function:  
+
 ```math
   L(\theta; w^{(t)}) = - \log \prod_{c=1}^{C} \frac{e^{W_{\text{output}_{(c)}} \cdot h}}{\sum_{i=1}^{V} e^{W_{\text{output}_{i}} \cdot h}} = -\sum_{c=1}^{C} \log \frac{e^{W_{\text{output}_{(c)}} \cdot h}}{\sum_{i=1}^{V} e^{W_{\text{output}_{i}} \cdot h}}
 ```
+
 ```math
   L(\theta; w^{(t)}) = - \sum \log P(w_\text{context}|w_\text{center};\theta)
 ```
@@ -284,8 +283,9 @@ FastText generally has better performance than Baseline Word2Vec algorithms (CBO
    - Target word vector: Sum of vectors of all sub-words.
 5. **Train Neural Network with:** two inputs, one hidden layer and one segmoid output
    - By maximizing similarity with context words and minimizing similarity with negative samples using a neural network.
-  - Architecture:
-  - ![alt text](assets/image4.png)
+   - Architecture:
+   - ![alt text](assets/image4.png)
+
 </details>
 
 <details><summary><h3>Q28. What is the goal of stemming and lemmatization and what is the difference between them?</h3></summary>
@@ -300,4 +300,3 @@ FastText generally has better performance than Baseline Word2Vec algorithms (CBO
   - Used in case of small datasets where accuracy is an issue, because its computationally expensive.
 
 </details>
-
