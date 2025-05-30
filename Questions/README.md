@@ -548,13 +548,13 @@ $W_{uc}$ can Do the same functionality It can Control the amount of relevance of
 <details><summary><h3>Q21. What are the gates in LSTM and what are their functions/effects?</h3></summary>
 
 - **Forget Gate**: Decides what portion of the previous memory $C_{t-1}$ to forget.
-  - If $G_f=0$, Forget Previous Memory Value "$C_{t-1}$".
-  - If $G_f=1$, Keep Memory Value "$C_{t}$" Same as the previous Value "$C_{t-1}$".
+  - If $G_f=0$, Forget Previous Memory Value " $C_{t-1}$ ".
+  - If $G_f=1$, Keep Memory Value " $C_{t}$ " Same as the previous Value " $C_{t-1}$ ".
 - **Input Gate**: Controls how much of the new candidate information $\tilde{C}$ to add to the memory.
-  - If $G_i=0$, Do Not Update Memory Value "$C_{t}$".
-  - If $G_i=1$, Update Memory Value "$C_{t}$" with Candidate Memory Value "$\tilde{C}$".
+  - If $G_i=0$, Do Not Update Memory Value " $C_{t}$ ".
+  - If $G_i=1$, Update Memory Value " $C_{t}$ " with Candidate Memory Value " $\tilde{C}$ ".
 - **Output Gate**: Controls how much of the cell state $C_t$ should be used for the output.
-  - If $G_o=0$, Do Not Output Memory Value "$C_{t}$".
+  - If $G_o=0$, Do Not Output Memory Value " $C_{t}$ ".
   - If $G_o=1$, Output Memory Value " $C_{t}$ ".
 
 </details>
