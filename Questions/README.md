@@ -387,7 +387,7 @@ P(\text{Zein is playing football}) = P(\text{Zein}) * P(\text{is}|\text{Zein}) *
 ```
 
 ```math
-P(w_2|w_1) = \frac{\text{count}(w_1, w_2)}{\text{count}(w_1)}
+P(w_2\|w_1) = \frac{\text{count}(w_1, w_2)}{\text{count}(w_1)}
 ```
 
 </details>
