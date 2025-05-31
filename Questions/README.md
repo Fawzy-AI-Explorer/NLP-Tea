@@ -637,7 +637,7 @@ $W_{cc}$ can Do the same functionality It can Control the amount of relevance of
 - **Narrow Architecture**:
   - Combines multiple heads.
   - Input x is split into H parts, each part is processed by a different head (input dimension is d/H for each head).
-  - All outputs are concatenated (size will be d) and pass through a linear transformation to reduce the dimension back to the embedding size.
+  - All outputs are concatenated (size will be d) to back to the embedding size.
   - Less expressive power.
   - Fewer parameters to train.
   - Architecture:
