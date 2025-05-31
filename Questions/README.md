@@ -556,3 +556,154 @@ $W_{cc}$ can Do the same functionality It can Control the amount of relevance of
   - If $G_o=1$, Output Memory Value " $C_{t}$ ".
 
 </details>
+
+## Transformers
+
+<details><summary><h3>Q1. Draw Traditional RNN Seq2Seq Architecture</h3></summary>
+
+![alt text](assets/image21.png)
+
+</details>
+
+<details><summary><h3>Q2. What are the challenges with Traditional RNN Seq2Seq?</h3></summary>
+
+1. **Bottleneck**: The meaning of the entire input sequence is Expected to be captured by a single context vector with fixed dimensionality
+
+2. **Sequential Processing**: Can NOT do processing in Parallel
+
+3. **Very Long Sequence**: Vanishing Gradient
+
+</details>
+
+<details><summary><h3>Q3. Explain how to overcome the Bottlneck challenge in Traditional RNN Seq2Seq?</h3></summary>
+
+- **Attention Mechanism**: Instead of using a single context vector, use a weighted sum of the hidden states.
+- **Decoder Utilizes**:
+  - Context Vector
+  - Weighted sum of hidden states
+
+</details>
+
+<details><summary><h3>Q4. Illustrate the Attention Mechanism in Seq2Seq and mention what this mechanism supports?</h3></summary>
+
+![alt text](assets/image23.png)
+
+- **Supports**:
+  - Parallelization of Encoder
+  - Parallelization of Decoder (Training Mode Only)
+  - Very Long Sequence length
+
+</details>
+
+<details><summary><h3>Q5. Draw the Encoder Decoder Transformer Architecture</h3></summary>
+
+![alt text](assets/image24.png)
+
+</details>
+
+<details><summary><h3>Q6. Draw the Multi-Head Self Attention Architecture</h3></summary>
+
+![alt text](assets/image25.png)
+
+</details>
+
+<details><summary><h3>Q7. Illustrate How Self Attention Mechanism works in Transformer</h3></summary>
+
+![alt text](assets/image26.png)
+
+</details>
+
+<details><summary><h3>Q8. Why we need to apply scaling in Self Attention Mechanism?</h3></summary>
+
+- As Dimension of Embedding “d” Increases the Calculated weight value “w” increases.  
+- High Weight Values kill the gradient, and slow down learning.  
+- To avoid this, we scale the weight value before applying softmax by dividing it by $\sqrt{d}$. (*d is the dimension of the embedding*)
+
+</details>
+
+<details><summary><h3>Q9. Compare between Wide architecture and Narrow architecture in Multi-Head Self Attention</h3></summary>
+
+- **Wide Architecture**:
+  - Combines multiple heads with different sets of parameters.
+  - For inupt x, each head learns a different representation y (same dimension as x).
+  - All outputs are concatenated (size will be d*H where d is embedding dim and H is the number of heads) and pass through a linear transformation to reduce the dimension back to the embedding size.
+  - More expressive power.
+  - More parameters to train.
+  - Architecture:
+  ![alt text](assets/image27.png)
+
+- **Narrow Architecture**:
+  - Combines multiple heads.
+  - Input x is split into H parts, each part is processed by a different head (input dimension is d/H for each head).
+  - All outputs are concatenated (size will be d) and pass through a linear transformation to reduce the dimension back to the embedding size.
+  - Less expressive power.
+  - Fewer parameters to train.
+  - Architecture:
+  ![alt text](assets/image28.png)
+
+</details>
+
+<details><summary><h3>Q10. Fill in the green gabs.</h3>
+
+![alt text](assets/image29.png)
+</summary>
+
+**Answer**:
+
+![alt text](assets/image30.png)
+
+</details>
+
+<details><summary><h3>Q11. Why we need position information in Transformer and what are the two ways to add it?</h3></summary>
+
+- Why: Because of parallelization, the model does not have any information about the order of the words in the sequence.
+
+- Two ways to add position information:
+  1. **Position Encoding**:
+     - Function to map the positions to real valued vectors
+     - Suggested Positional Encoders:
+       - Use Word Index as Position Encoding
+         - Problems:
+           - If N is large (e.g. seq. Length = 1024), Large position Values will dominate when Combine Position Embedding to Word Embedding
+           - If System is trained with Max seq length =256 how can the system deal with Larger sequence values
+           - Position Encoding is scalar and Word embedding is vector (how to Combine them ?)
+
+       - Normalize Seq. Length to “1”: Use $\delta=\frac{1}{\text{Seq. Length}}$
+         - Problems:
+           - $\delta$ Value depends on Seq. Length
+           - Position Encoding is scalar and Word embedding is vector (how to Combine them ?)
+
+       - Sine/Cosine Encoders:
+         - Word Embedding Dimension “d” [Even Num]
+         - Position Encoding Dimension “d”
+         - Number of Vector Pairs “K”=d/2 [0, 1, 2,… d/2-1]
+         - Elements Index “i” [0, 1, 2, …. d-1]
+         - Even Index “i” is Sine Term = $\sin{(\omega_k t)}$, i=2*k
+         - Odd Index “i” is Cosine Term = $\cos{(\omega_k t)}$, i=2*k+1
+         - $\omega_k = \frac{1}{N^{\frac{2k}{d}}} $, N is the Seq. Length.
+
+  2. **Position Embedding**: Use a separate embedding layer to learn position vectors.
+     - Real valued vectors representing positions(Vector for each position)
+     - Problem: Positions > N-1 can NOT be Embedded (Must Train Embedding on Max Expected Seq. Length)
+     - Vector Length = Word Embedding length
+
+</details>
+
+<details><summary><h3>Q12. What are Rules Controlling Good Positional Encoder?</h3></summary>
+
+1. $\delta$ value should be small for long sequences and large for short sequences.
+2. Range of position encoded values should NOT depend on the sequence length.
+3. Position encoding should be VECTOR, not SCALAR.
+
+</details>
+
+<details><summary><h3>Q13. Why we need Residual Connection in Transformer?</h3></summary>
+
+- Residual Connection helps to avoid the vanishing gradient problem by allowing gradients to flow through the network without being diminished.
+- It also allows the model to skip the multi-head attention and feed-forward layers if they are not needed, which can help in training deeper networks.
+
+</details>
+
+<details><summary><h3>Q14. Why we need to use Layer Normalization in Transformer?</h3></summary>
+
+</details>
