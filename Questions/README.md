@@ -656,7 +656,7 @@ $W_{cc}$ can Do the same functionality It can Control the amount of relevance of
 
 </details>
 
-<details><summary><h3>Q11. Why we need position information in Transformer and what are the two ways to add it?</h3></summary>
+<details><summary><h3>Q11. Why we need position information in Transformer and what are the two ways to add it meantion the poblems assocciated with each?</h3></summary>
 
 - Why: Because of parallelization, the model does not have any information about the order of the words in the sequence.
 
