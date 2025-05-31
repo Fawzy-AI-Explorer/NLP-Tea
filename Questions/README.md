@@ -706,7 +706,7 @@ $W_{cc}$ can Do the same functionality It can Control the amount of relevance of
 
 </details>
 
-<details><summary><h3>Q14. Why we need to use Layer Normalization in Transformer?</h3></summary>
+<details><summary><h3>Q14. Why we need to use Normalization in Transformer?</h3></summary>
 
 **Problem**: Input distribution of each layer changes with each step (Covariate Shift).
 **Normalization**: Transforming the inputs to be Zero mean and unit variance.
