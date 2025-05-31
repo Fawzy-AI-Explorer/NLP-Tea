@@ -609,7 +609,7 @@ $W_{cc}$ can Do the same functionality It can Control the amount of relevance of
 
 </details>
 
-<details><summary><h3>Q7. Illustrate How Self Attention Mechanism works in Transformer</h3></summary>
+<details><summary><h3>Q7. Illustrate How Self Attention Mechanism works in Transformer (Scaled Dot-Product).</h3></summary>
 
 ![alt text](assets/image26.png)
 
