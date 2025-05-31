@@ -732,7 +732,7 @@ $W_{cc}$ can Do the same functionality It can Control the amount of relevance of
     - Calculate (then Normalize) $\mu,\space \sigma$ for Groups of Channels in ONE Sample
   - **Layer Normalization**
     - Calculate (then Normalize) $\mu,\space \sigma$ for ALL Channels in the Same Sample (Input to Same Layer)
-    - <font color="red">**<u>Applied in Transformer</u>**</font>
+    - <u>Applied in Transformer</u>
 
 </details>
 
