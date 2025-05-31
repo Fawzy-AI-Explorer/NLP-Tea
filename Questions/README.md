@@ -358,7 +358,7 @@ FastText generally has better performance than Baseline Word2Vec algorithms (CBO
 
 </details>
 
-<details><summary><h3>Q5. Why using Max-Pooling over Time></h3></summary>
+<details><summary><h3>Q5. Why using Max-Pooling over Time?</h3></summary>
 
 In order to indicate the presence of these high-level features, we need a way to identify them in a vector, regardless of the location within the larger input sequence. One way to identify important features, no matter their location in a sequence, is to discard less-relevant, locational information.
 
