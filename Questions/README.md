@@ -708,4 +708,69 @@ $W_{cc}$ can Do the same functionality It can Control the amount of relevance of
 
 <details><summary><h3>Q14. Why we need to use Layer Normalization in Transformer?</h3></summary>
 
+**Problem**: Input distribution of each layer changes with each step (Covariate Shift).
+**Normalization**: Transforming the inputs to be Zero mean and unit variance.
+**Normalization allows each layer to**:
+
+- learn on a more stable distribution of inputs,
+- Accelerate the training of the network (don’t stick with very small learning rates).
+
+> Normalization allows the network to learn parameters $\gamma$ and $\beta$ that can convert the mean and variance to any value that minimizes the loss.
+
+</details>
+
+<details><summary><h3>Q15. Where the normalization is appllied, What are the different types of normalization?</h3></summary>
+
+- Normalization of weigths:
+  - Weight Normalization
+- Normalization of Activations:
+  - **Batch Normalization**
+    - Calculate (then Normalize) $\mu,\space \sigma$ for ALL Samples in the batch for each channel
+    - Mini Batch Size should be large enough to minimize “batching” effect.
+  - **Instance Normalization**
+    - Calculate (then Normalize) $\mu,\space \sigma$ for ONE Channels in ONE Sample (Output of ONE Filter)
+  - **Group Normalization**
+    - Calculate (then Normalize) $\mu,\space \sigma$ for Groups of Channels in ONE Sample
+  - **Layer Normalization**
+    - Calculate (then Normalize) $\mu,\space \sigma$ for ALL Channels in the Same Sample (Input to Same Layer)
+    - <font color="red">**<u>Applied in Transformer</u>**</font>
+
+</details>
+
+<details><summary><h3>Q16. What is Masked Multi-head Self Attention Block and how it works Explain and Illustrate?</h3></summary>
+
+- **Masked Multi-head Self Attention Block**: A block that prevents the model from attending to future tokens in the sequence during training.
+
+Mask Values are ADDED to Masked (Scaled) Values
+
+- Addition of “0” does not change the original values, consequently no effect on Softmax output
+- Addition of “-inf” gets “Zero” output of Softmax, leaving zero attention scores for future Words.
+
+![alt text](assets/image31.png)  
+![alt text](assets/image32.png)  
+
+</details>
+
+<details><summary><h3>Q17. How can we use Decode for text classification (Illustrate)?</h3></summary>
+
+- **Decoder for Text Classification**:
+  - Get the last decoder block output
+  - apply a liner layer to get a vector with the same size as the vocab size
+  - apply softmax to get the probabilities of each word in the vocab
+
+- **Illustration**:  
+![alt text](assets/image33.png)  
+
+</details>
+
+<details><summary><h3>Q18. How can we use the Encoder for text classification (Illustrate)?</h3></summary>
+
+- **Encoder for Text Classification**:
+  - Get the last encoder block output
+  - Apply Average Pooling to get a single vector representation of the whole sequence
+  - Apply Softmax to get the probabilities of each class
+
+- **Illustration**:  
+![alt text](assets/image34.png)
+
 </details>
