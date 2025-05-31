@@ -487,9 +487,10 @@ E(y, \hat{y}) = \sum_{t=1}^{T} E_t(y_t,\hat{y}_t)}
 
 <details><summary><h3>Q14. What is the problems with RNNs?</h3></summary>
 
-Error Gradients pass through nonlinearity every step  
-Saturation at both ends ==> zero gradient  
-Vanishing completely after a few time steps.  
+- Error Gradients pass through nonlinearity every step  
+- Saturation at both ends ==> zero gradient  
+- Vanishing completely after a few time steps.  
+- Can't handle very long sequences.
 
 </details>
 
