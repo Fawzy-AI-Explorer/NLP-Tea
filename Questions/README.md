@@ -504,19 +504,19 @@ E(y, \hat{y}) = \sum_{t=1}^{T} E_t(y_t,\hat{y}_t)}
 
 </details>
 
-<details><summary><h3>Q16. Draw RNN Unit Architecture</h3></summary>
+<details><summary><h3>Q16. Draw RNN Unit Architecture.</h3></summary>
 
 ![alt text](assets/image19.png)
 
 </details>
 
-<details><summary><h3>Q17. Draw GRU Unit Architecture</h3></summary>
+<details><summary><h3>Q17. Draw GRU Unit Architecture and Write down the equations.</h3></summary>
 
 ![alt text](assets/image20.png)
 
 </details>
 
-<details><summary><h3>Q18. Draw LSTM Unit Architecture</h3></summary>
+<details><summary><h3>Q18. Draw LSTM Unit Architecture and Write down the equations.</h3></summary>
 
 ![alt text](assets/image22.png)
 
