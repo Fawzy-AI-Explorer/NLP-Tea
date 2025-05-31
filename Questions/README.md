@@ -693,7 +693,7 @@ $W_{cc}$ can Do the same functionality It can Control the amount of relevance of
 
 <details><summary><h3>Q12. What are Rules Controlling Good Positional Encoder?</h3></summary>
 
-1. $\delta$ value should be small for long sequences and large for short sequences.
+1. $\delta=\frac{1}{\text{Seq. Length}}$ value should be small for long sequences and large for short sequences.
 2. Range of position encoded values should NOT depend on the sequence length.
 3. Position encoding should be VECTOR, not SCALAR.
 
