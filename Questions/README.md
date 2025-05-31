@@ -525,12 +525,12 @@ E(y, \hat{y}) = \sum_{t=1}^{T} E_t(y_t,\hat{y}_t)}
 <details><summary><h3>Q19. What are the gates in GRU and what are their functions/effects?</h3></summary>
 
 - **Update Gate**: Controls how much of the past information to keep and how much to update with new information.
-  - If $G_u=0$, Keep Memory Value "$C_{t}$" Same as the previous Value "$C_{t-1}$".
-  - If $G_u=1$, Forget Previous Memory Value "$C_{t-1}$".
+  - If $G_u=0$, Keep Memory Value " $C_{t}$ " Same as the previous Value " $C_{t-1}$ ".
+  - If $G_u=1$, Forget Previous Memory Value " $C_{t-1} $".
 
 - **Relevance Gate**: Controls how much of the new information to add to the memory.
-  - If $G_r=1$, $C_{t-1}$ is Relevant to update Candidate Memory Value "$\tilde{C}$".
-  - If $G_r=0$, $C_{t-1}$ is Not Relevant to update Candidate Memory Value "$\tilde{C}$".
+  - If $G_r=1$, $C_{t-1}$ is Relevant to update Candidate Memory Value " $\tilde{C}$ ".
+  - If $G_r=0$, $C_{t-1}$ is Not Relevant to update Candidate Memory Value " $\tilde{C}$ ".
 
 - If $G_u=1$ and $G_r=0$, Traditional NN (No Recurrency).
 - If $G_u=1$ and $G_r=1$, RNN (Not GRU).
