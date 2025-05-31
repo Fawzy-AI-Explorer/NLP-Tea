@@ -557,6 +557,8 @@ $W_{cc}$ can Do the same functionality It can Control the amount of relevance of
 
 </details>
 
+---
+
 ## Transformers
 
 <details><summary><h3>Q1. Draw Traditional RNN Seq2Seq Architecture</h3></summary>
