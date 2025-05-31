@@ -708,12 +708,11 @@ $W_{cc}$ can Do the same functionality It can Control the amount of relevance of
 
 <details><summary><h3>Q14. Why we need to use Normalization in Transformer?</h3></summary>
 
-**Problem**: Input distribution of each layer changes with each step (Covariate Shift).
-**Normalization**: Transforming the inputs to be Zero mean and unit variance.
-**Normalization allows each layer to**:
-
-- learn on a more stable distribution of inputs,
-- Accelerate the training of the network (don’t stick with very small learning rates).
+- **Problem**: Input distribution of each layer changes with each step (Covariate Shift).
+- **Normalization**: Transforming the inputs to be Zero mean and unit variance.
+- **Normalization allows each layer to**:
+  - learn on a more stable distribution of inputs,
+  - Accelerate the training of the network (don’t stick with very small learning rates).
 
 > Normalization allows the network to learn parameters $\gamma$ and $\beta$ that can convert the mean and variance to any value that minimizes the loss.
 
