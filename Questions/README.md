@@ -328,7 +328,7 @@ FastText generally has better performance than Baseline Word2Vec algorithms (CBO
 
 <details><summary><h3>Q3. What is the difference between 1D, 2D, and 3D convolution?</h3></summary>
 
-- ID CNN,
+- 1D CNN,
   - kernel moves in 1 direction.
   - Input and output data of ID CNN is 2 dimensional.
   - Mostly used on Time-Series data.
@@ -750,9 +750,9 @@ Mask Values are ADDED to Masked (Scaled) Values
 
 </details>
 
-<details><summary><h3>Q17. How can we use Decode for text classification (Illustrate)?</h3></summary>
+<details><summary><h3>Q17. How can we use Decode for text generation (Illustrate)?</h3></summary>
 
-- **Decoder for Text Classification**:
+- **Decoder for Text Generation**:
   - Get the last decoder block output
   - apply a liner layer to get a vector with the same size as the vocab size
   - apply softmax to get the probabilities of each word in the vocab
