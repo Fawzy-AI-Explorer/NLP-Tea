@@ -366,7 +366,7 @@ In order to indicate the presence of these high-level features, we need a way to
 
 </details>
 
-<details><summary><h3>Q6. Draw the architecture for using multiple kernels with different scales in 1D CNN.</h3></summary>
+<details><summary><h3>Q6. Draw the architecture for using multiple kernels with different scales in 1D CNN (Input Shape 7x5).</h3></summary>
 
 ![alt text](assets/image11.png)
 
