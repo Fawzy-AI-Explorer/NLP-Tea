@@ -400,7 +400,7 @@ $P(w_2|w_1) = \frac{\text{count}(w_1, w_2)}{\text{count}(w_1)}$
 
 </details>
 
-<details><summary><h3>Q10. Give 4 examples of RNN/LSTM applications specific the type of the task and draw the architecture for each.</h3></summary>
+<details><summary><h3>Q10. Give 4 examples of RNN/LSTM applications specifying the type of the task and draw the architecture for each.</h3></summary>
 
 ![alt text](assets/image14.png)
 
